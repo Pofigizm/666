@@ -9,11 +9,12 @@ echo "-------------------- 1"
 echo "Local folder is $DIR"
 
 echo "-------------------- 2"
-echo "FROM node:0.12.7-slim" > $DIR/Dockerfile
-echo "RUN apt-get update; apt-get install -y git; apt-get install -y python; apt-get install -y build-essential;" >> $DIR/Dockerfile
-echo "RUN apt-get install -y nodejs-legacy;" >> $DIR/Dockerfile
+
+echo "FROM ubuntu" > $DIR/Dockerfile
+echo "RUN apt-get update" >> $DIR/Dockerfile
+echo "RUN apt-get install -y nodejs nodejs-legacy npm git git-core python build-essential" >> $DIR/Dockerfile
 echo "WORKDIR /src" >> $DIR/Dockerfile
-echo "CMD (git clone -b $BRANCH https://github.com/Pofigizm/666.git . || git pull) && npm install -verbose" >> $DIR/Dockerfile
+echo "CMD (git clone -b $BRANCH https://github.com/Pofigizm/666.git . || git pull) && npm install -verbose && npm run build" >> $DIR/Dockerfile
 cat $DIR/Dockerfile
 
 echo "-------------------- 3"
@@ -28,7 +29,7 @@ chmod 777 $DIR/src
 docker run -i \
   -v $DIR/src:/src \
   -t $REPO/build-$BRANCH \
-  || cp $DIR/src/docker/do_scripts/rebuild.sh .; exit 1;
+  || exit 1;
 
 echo "-------------------- 5"
 cp -r $DIR/src/docker/do_scripts/* .
