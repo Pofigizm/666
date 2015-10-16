@@ -1,4 +1,4 @@
-FROM anonym/mongodb
+FROM pfgzm/mongodb
 
 # Install NodeJS.
 RUN \

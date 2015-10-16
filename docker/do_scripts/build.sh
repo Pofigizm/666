@@ -36,5 +36,5 @@ cp -r $DIR/src/docker/do_scripts/* .
 cd $DIR/src && sh build_container.sh
 
 echo "-------------------- 6"
-sh run.sh
+cd $DIR && sh run.sh
 

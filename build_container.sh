@@ -10,7 +10,7 @@ cp docker/start.sh build/;
 # check anonym/mongodb exist
 docker images | grep $REPO/mongodb;
 if [ $? -ne 0 ]; then
-  ( cd docker && cd mongodb && docker build -t anonym/mongodb . ) || exit 1;
+  ( cd docker && cd mongodb && docker build -t $REPO/mongodb . ) || exit 1;
 fi
 
 # check anonym/dependensy exist

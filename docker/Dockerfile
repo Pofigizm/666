@@ -1,4 +1,4 @@
-FROM anonym/dependensy
+FROM pfgzm/dependensy
 
 ADD ./build /data
 WORKDIR /data
