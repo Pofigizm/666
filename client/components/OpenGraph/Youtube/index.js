@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.scss';
 
 const WATCH_REGEX = /http:\/\/www.youtube.com\/watch\?v=(.+)/;
 
-class Youtube extends Component {
-  render() {
-    const { url } = this.props;
-    return (
-      <div className="attachment attachment--video">
-        <iframe width={640} height={360}
-          src={url} frameBorder="0" allowFullScreen>
-        </iframe>
-      </div>
-    );
-  }
-}
+const Youtube = ({ url }) => (
+  <div className="attachment attachment--video">
+    <iframe width={640} height={360}
+      src={url} frameBorder="0" allowFullScreen>
+    </iframe>
+  </div>
+);
 
 export default meta => {
   if (meta.ogSiteName !== 'YouTube') return false;
