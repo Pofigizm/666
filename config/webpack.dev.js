@@ -9,7 +9,7 @@ export default {
   debug: true,
   devtool: 'eval',
   entry: [
-    'webpack-dev-server/client',
+    'webpack-hot-middleware/client',
     'webpack/hot/only-dev-server',
     './client/main',
   ],
