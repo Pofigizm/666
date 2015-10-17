@@ -17,3 +17,4 @@ tmp/**/*.*
 logs/
 build/
 docker/dependensy/data/
+.vscode/
