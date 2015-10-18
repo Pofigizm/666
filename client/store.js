@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import createLogger from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
+import promiseMiddleware from 'redux-promise';
 import { reduxReactRouter } from 'redux-router';
 
 import { writeState } from './storage';
@@ -14,21 +15,7 @@ const loggerMiddleware = createLogger({
     action.type !== 'SEARCH_INPUT_CHANGE',
 });
 
-/**
- * Lets you dispatch promises in addition to actions.
- * If the promise is resolved, its result will be dispatched as an action.
- * The promise is returned from `dispatch` so the caller may handle rejection.
- */
-const vanillaPromise = store => next => action => {
-  if (typeof action.then !== 'function') {
-    return next(action);
-  }
-
-  action.then(store.dispatch);
-  return action;
-};
-
-let middleware = [thunkMiddleware, vanillaPromise, writeState];
+let middleware = [thunkMiddleware, promiseMiddleware, writeState];
 middleware = NODE_ENV === 'production' ? middleware :
               middleware.concat(loggerMiddleware);
 
