@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 
 import { readState } from './storage';
 import createStorePlus from './store';
-import all from './reducers';
+import reducers from './reducers';
 import App from './components/App';
 import RoomEntrance from './components/RoomEntrance';
 import NotFound from './components/Splashes/NotFound';
@@ -18,7 +18,7 @@ import * as transport from './transport';
 import { ReduxRouter } from 'redux-router';
 import { Route } from 'react-router';
 
-const store = createStorePlus(all);
+const store = createStorePlus(reducers);
 const rootElement = document.getElementById('content');
 const lastState = readState();
 
@@ -35,15 +35,12 @@ const app = (
 
 transport.onMessage(data =>
     store.dispatch(newMessage(data)));
-
 transport.onAttachment(data =>
     store.dispatch(newAttachment(data)));
-
 transport.onJoinUser(data =>
     store.dispatch(joinUser(data)));
 transport.onLeaveUser(data =>
     store.dispatch(leaveUser(data)));
-
 transport.onTopRooms(data =>
     store.dispatch(updateTopRooms(data.rooms)));
 
