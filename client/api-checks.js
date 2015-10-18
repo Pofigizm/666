@@ -18,7 +18,7 @@ const silent = (name, check) => data => {
   return true;
 };
 
-const wrap = NODE_ENV === 'production' ? silent : loud;
+const wrap = __DEV__ ? loud : silent;
 
 export const topRooms = wrap('topRooms', data => {
   throwWhen(data.rooms instanceof Array);

@@ -64,7 +64,7 @@ export default {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.DefinePlugin({
-      NODE_ENV: '"production"',
+      __DEV__: 'false',
       SOCKET_PORT: '"8080"',
     }),
   ],

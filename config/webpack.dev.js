@@ -55,7 +55,7 @@ export default {
       template: root + '/client/index.html',
     }),
     new webpack.DefinePlugin({
-      NODE_ENV: '"development"',
+      __DEV__: 'true',
       SOCKET_PORT: '"3001"',
     }),
   ],
