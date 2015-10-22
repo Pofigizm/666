@@ -43,7 +43,7 @@ export const restoreState = state => dispatch => {
   const rooms = state.joinedRooms;
   const roomKeys = Object.keys(rooms);
 
-  const routerRoomID = state.router.params.roomID;
+  const routerRoomID = state.router.params && state.router.params.roomID;
   if (routerRoomID && !rooms[routerRoomID]) {
     dispatch(joinRoom({roomID: routerRoomID}));
   }
@@ -55,8 +55,8 @@ export const restoreState = state => dispatch => {
 };
 
 export const switchToRoom = (history, roomID) => (dispatch, getState) => {
-  const state = getState();
-  const routerRoomID = state.router.params.roomID;
+  const state = getState().toJS();
+  const routerRoomID = state.router.params && state.router.params.roomID;
   if (roomID && routerRoomID === roomID) return; // do nothing!
   const needToJoin = !roomID || (state.joinedRooms[roomID] === undefined);
 
@@ -87,14 +87,14 @@ export const createRoom = (history, roomID) => dispatch => {
 };
 
 export const leaveRoom = (history, roomID) => (dispatch, getState) => {
-  const state = getState();
+  const state = getState().toJS();
   const room = state.joinedRooms[roomID];
   if (!room) {
     console.log(`Cannot leave room ${roomID}: we are not in it!?`);
     return;
   }
   const { secret, userID } = room;
-  const routerRoomID = state.router.params.roomID;
+  const routerRoomID = state.router.params && state.router.params.roomID;
   if (routerRoomID === roomID) {
     dispatch(pushState(history, `/`));
   }
@@ -109,9 +109,9 @@ function newPendingID() {
 }
 
 export const sendMessage = () => (dispatch, getState) => {
-  const state = getState();
+  const state = getState().toJS();
   if (state.ui.roomInputText === '') return; // don't send
-  const roomID = state.router.params.roomID;
+  const roomID = state.router.params && state.router.params.roomID;
   const room = state.joinedRooms[roomID];
   if (!room) {
     throw new Error('Terminal failure: sent a message without being in a room.');

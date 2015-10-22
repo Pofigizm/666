@@ -41,7 +41,8 @@ const RoomEntrance = ({ roomLoading, roomLoaded, room, roomID, dispatch }) => {
     </div> );
 };
 
-export default connect(state => {
+export default connect(immState => {
+  const state = immState.toJS();
   const { roomID } = state.router.params;
   const room = state.joinedRooms[roomID];
   const roomLoading = state.joiningRooms[roomID];

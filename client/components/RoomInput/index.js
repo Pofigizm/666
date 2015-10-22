@@ -60,7 +60,8 @@ class RoomInput extends Component {
   }
 }
 
-export default connect(state => {
+export default connect(immState => {
+  const state = immState.toJS();
   const text = state.ui.roomInputText;
   const { previewCollapsed } = state.ui;
 

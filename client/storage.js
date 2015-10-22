@@ -2,7 +2,7 @@ const key = 'all-state';
 
 export const writeState = ({getState}) => (next) => (action) => {
   const result = next(action);
-  const state = JSON.stringify(getState());
+  const state = JSON.stringify(getState().toJS());
   window.localStorage.setItem(key, state);
   return result;
 };

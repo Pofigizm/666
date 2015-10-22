@@ -99,12 +99,13 @@ const Navigation = ({ dispatch, collapsed, routerRoomID, shouldShowCreation,
   </nav>
 );
 
-export default connect(state => {
+export default connect(immState => {
+  const state = immState.toJS();
   const collapsed = state.ui.navigationCollapsed;
   const { topRooms, joinedRooms } = state;
   const searchResults = state.ui.searchResults;
   const searchText = state.ui.searchInputText;
-  const routerRoomID = state.router.params.roomID;
+  const routerRoomID = state.router.params && state.router.params.roomID;
   const shouldShowCreation =
     searchText.length > 0 &&
     searchResults &&

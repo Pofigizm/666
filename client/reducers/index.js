@@ -1,3 +1,4 @@
+// import { combineReducers } from 'redux';
 import { combineReducers } from 'redux-immutablejs';
 
 import joinedRooms from './joined-rooms';

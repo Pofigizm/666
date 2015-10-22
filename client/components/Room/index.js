@@ -59,7 +59,8 @@ const Room = ({ room, showPreview, inputText }) => {
   );
 };
 
-export default connect(state => {
+export default connect(immState => {
+  const state = immState.toJS();
   const inputText = state.ui.roomInputText;
   const { previewCollapsed } = state.ui;
   return {
