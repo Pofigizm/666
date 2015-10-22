@@ -1,151 +1,96 @@
 import * as actions from '../../actions';
+import { Map, List } from 'immutable';
 
 function joinUser(room, action) {
-  const {userID} = action;
-  return {
-    ...room,
-    roomUsers: {
-      ...room.roomUsers,
-      [userID]: action.user,
-    },
-  };
+  const { userID, user } = action;
+
+  return room
+    .setIn(['roomUsers', userID], user);
 }
 
 function leaveUser(room, action) {
-  const {userID} = action;
-  const users = room.roomUsers;
-  const newUsers = Object.assign({}, users);
-  delete newUsers[userID];
-  return {
-    ...room,
-    roomUsers: newUsers,
-  };
+  const { userID } = action;
+
+  return room
+    .removeIn(['roomUsers', userID]);
 }
 
 function newMessage(room, action) {
+  const { userID, messageID } = action.message;
   const { message } = action;
-  const userID = action.message.userID;
-  const { messageID } = message;
-  if (room.userID === userID) { // ignore our message
+  if (room.get('userID') === userID) { // ignore our message
     return room;
   }
-  return {
-    ...room,
-    // TODO: insert at correct time, not last in list.
-    orderedMessages: [
-      ...room.orderedMessages,
-      messageID, // ! appended to the end.
-    ],
-    roomMessages: {
-      ...room.roomMessages,
-      [messageID]: {
-        ...message,
-        attachments: [], // TODO may by get it from server??
-        status: 'confirmed',
-        index: room.orderedMessages.length, // ! appended to the end.
-      },
-    },
-  };
+
+  return room
+    .update('orderedMessages', om => om.push(messageID))
+    .setIn(['roomMessages', messageID],
+      Map(message)
+        .set('attachments', List())
+        .set('status', 'confirmed')
+        .set('index', room.get('orderedMessages').count())
+    );
 }
 
 function newAttachment(room, action) {
   const { messageID, meta, index, url } = action;
-  const message = room.roomMessages[messageID];
-  if (!message) {
+  const attachment = Map({ meta, index, url });
+  if (!room.hasIn(['roomMessages', messageID])) {
     // TODO handle situation;
     console.log('newAttachment could not find the messageID: `${messageID}`');
   }
-  const { attachments } = message;
-  return {
-    ...room,
-    roomMessages: {
-      ...room.roomMessages,
-      [messageID]: {
-        ...message,
-        attachments: [
-          ...attachments,
-          { meta, index, url },
-        ],
-      },
-    },
-  };
+
+  return room
+    .updateIn(
+      ['roomMessages', messageID, 'attachments'],
+      at => at.push(attachment)
+    );
 }
 
 function sentMessage(room, action) {
   const { text, time, pendingID } = action;
-  const { userID } = room;
+  const userID = room.get('userID');
   const messageID = pendingID;
   const message = {
     userID,
     messageID,
     text,
     time,
-    attachments: [],
   };
-  return {
-    ...room,
-    orderedMessages: [
-      ...room.orderedMessages,
-      messageID, // ! appended to the end.
-    ],
-    roomMessages: {
-      ...room.roomMessages,
-      [messageID]: {
-        ...message,
-        status: 'sent',
-        index: room.orderedMessages.length, // ! appended to the end.
-      },
-    },
-  };
+
+  return room
+    .update('orderedMessages', om => om.push(messageID))
+    .setIn(['roomMessages', messageID],
+      Map(message)
+        .set('attachments', List())
+        .set('status', 'sent')
+        .set('index', room.get('orderedMessages').count())
+    );
 }
 
 function confirmSentMessage(room, action) {
   const { pendingID, messageID, text } = action;
-  const { roomMessages, orderedMessages } = room;
-  const { index } = roomMessages[pendingID];
+  const index = room.get('orderedMessages').indexOf(pendingID);
+  const message = room
+    .getIn(['roomMessages', pendingID])
+    .set('status', 'confirmed')
+    .set('text', text)
+    .set('messageID', messageID);
 
-  // TODO переписать покрасивее (без мутирования промежуточных значений?)
-
-  const newRoomMessages = (() => {
-    const tmp = Object.assign({}, roomMessages);
-    tmp[messageID] = {
-      ...tmp[pendingID],
-      status: 'confirmed',
-      text,
-      messageID,
-    };
-    delete tmp[pendingID];
-    return tmp;
-  })();
-
-  const newOrderedMessages = (() => {
-    const tmp = [ ...orderedMessages ];
-    tmp[index] = messageID;
-    return tmp;
-  })();
-
-  return {
-    ...room,
-    roomMessages: newRoomMessages,
-    orderedMessages: newOrderedMessages,
-  };
+  return room
+    .removeIn(['roomMessages', pendingID])
+    .setIn(['roomMessages', messageID], message)
+    .setIn(['orderedMessages', index], messageID);
 }
 
 function rejectSentMessage(room, action) {
   const { pendingID } = action;
-  const { roomMessages } = room;
-  const message = roomMessages[pendingID];
 
-  return {
-    ...room,
-    roomMessages: {
-      ...roomMessages,
-      [pendingID]: {
-        ...message,
-        status: 'rejected',
-      },
-    },
-  };
+  return room
+    .updateIn(
+      ['roomMessages', pendingID, 'status'],
+      'rejected'
+    );
 }
 
 /*
@@ -164,40 +109,29 @@ function rejectSentMessage(room, action) {
       time: number,
       index: number,
       status: 'sent' | 'confirmed' | 'rejected',
-    })],
+    }),
     orderedMessages: ['messageID'],
   });
 */
 
 export default (state = {}, action) => {
-  function insideRoom(roomID, reducer) {
-    const room = state[roomID];
-    if (!room) {
+  function inside(reducer) {
+    const { roomID } = action;
+    if (!state.has(roomID)) {
       console.log(`rooms ${action.type}: unexpected roomID "${roomID}"`);
       return state;
     }
-    return {
-      ...state,
-      [roomID]: reducer(room, action),
-    };
+    return state.update(roomID, room => reducer(room, action));
   }
 
   switch (action.type) {
-    case actions.JOIN_USER:
-      return insideRoom(action.roomID, joinUser);
-    case actions.LEAVE_USER:
-      return insideRoom(action.roomID, leaveUser);
-    case actions.NEW_MESSAGE:
-      return insideRoom(action.roomID, newMessage);
-    case actions.NEW_ATTACHMENT:
-      return insideRoom(action.roomID, newAttachment);
-    case actions.SENT_MESSAGE:
-      return insideRoom(action.roomID, sentMessage);
-    case actions.CONFIRM_SENT_MESSAGE:
-      return insideRoom(action.roomID, confirmSentMessage);
-    case actions.REJECT_SENT_MESSAGE: {
-      return insideRoom(action.roomID, rejectSentMessage);
-    }
+    case actions.JOIN_USER:             return inside(joinUser);
+    case actions.LEAVE_USER:            return inside(leaveUser);
+    case actions.NEW_MESSAGE:           return inside(newMessage);
+    case actions.NEW_ATTACHMENT:        return inside(newAttachment);
+    case actions.SENT_MESSAGE:          return inside(sentMessage);
+    case actions.CONFIRM_SENT_MESSAGE:  return inside(confirmSentMessage);
+    case actions.REJECT_SENT_MESSAGE:   return inside(rejectSentMessage);
     default: return state;
   }
 };

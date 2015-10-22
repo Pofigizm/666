@@ -1,12 +1,13 @@
 import * as actions from '../actions';
+import { Map } from 'immutable';
 
-const initialUi = {
+const initialUi = Map({
   navigationCollapsed: false,
   previewCollapsed: false,
   searchInputText: '',
   roomInputText: '',
   searchResults: null,
-};
+});
 
 /*
    ui: {
@@ -14,7 +15,7 @@ const initialUi = {
      previewCollapsed: boolean,
      searchInputText: string,
      roomInputText: string,
-     searchResults: null || [{
+     searchResults: [{
        roomID: string,
        name: string,
        users: number,
@@ -30,44 +31,20 @@ export default (state = initialUi, action) => {
       console.log('CREATE_ROOM_FAILED', action.description);
       return state;
     }
-    case actions.SEARCH_RESULTS_FAILED: {
-      // TODO indicate the failure to the user?
-      return {
-        ...state,
-        searchResults: null,
-      };
-    }
-    case actions.SEARCH_RESULTS_UPDATE: {
-      return {
-        ...state,
-        searchResults: action.results,
-      };
-    }
-    case actions.SEARCH_INPUT_CHANGE: {
-      return {
-        ...state,
-        searchInputText: action.text,
-      };
-    }
-    case actions.TOGGLE_PREVIEW: {
-      return {
-        ...state,
-        previewCollapsed: !state.previewCollapsed,
-      };
-    }
-    case actions.ROOM_INPUT_CHANGE: {
-      return {
-        ...state,
-        roomInputText: action.text,
-      };
-    }
-    case actions.TOGGLE_NAVIGATION: {
-      return {
-        ...state,
-        navigationCollapsed: !state.navigationCollapsed,
-      };
-    }
-    default: return state;
+    case actions.SEARCH_RESULTS_FAILED:
+      return state.set('searchResults', null);
+    case actions.SEARCH_RESULTS_UPDATE:
+      return state.set('searchResults', action.results);
+    case actions.SEARCH_INPUT_CHANGE:
+      return state.set('searchInputText', action.text);
+    case actions.TOGGLE_PREVIEW:
+      return state.set('previewCollapsed', !state.get('previewCollapsed'));
+    case actions.ROOM_INPUT_CHANGE:
+      return state.set('roomInputText', action.text);
+    case actions.TOGGLE_NAVIGATION:
+      return state.set('navigationCollapsed', !state.get('navigationCollapsed'));
+    default:
+      return state;
   }
 };
 

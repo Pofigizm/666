@@ -1,4 +1,5 @@
 import * as actions from '../actions';
+import { List } from 'immutable';
 
 /*
   topRooms: [{
@@ -6,13 +7,15 @@ import * as actions from '../actions';
     name: string,
     users: number,
     rating: number,
-  }] || null,
+  }],
 */
 
-export default (state = null, action)  => {
+export default (state = List(), action)  => {
   switch (action.type) {
-    case actions.UPDATE_TOP_ROOMS: return action.rooms;
-    default: return state;
+    case actions.UPDATE_TOP_ROOMS:
+      return List(action.rooms);
+    default:
+      return state;
   }
 };
 

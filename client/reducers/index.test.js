@@ -1,18 +1,20 @@
 import chai from "chai";
 import reducer from '../reducers';
+import Immutable from 'immutable';
 const expect = chai.expect;
 
 describe('handleActions', () => {
 
   it('check computedState_@@INIT_0 evaluation', () => {
     const curState = {};
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@INIT"
     };
     const nextState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -20,17 +22,17 @@ describe('handleActions', () => {
         "roomInputText": "",
         "searchResults": null
       },
-      "router": null
+      "router": {}
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_1 evaluation', () => {
     const curState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -38,8 +40,9 @@ describe('handleActions', () => {
         "roomInputText": "",
         "searchResults": null
       },
-      "router": null
+      "router": {}
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -67,7 +70,7 @@ describe('handleActions', () => {
     const nextState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -97,15 +100,15 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/replaceRoutes_2 evaluation', () => {
     const curState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -135,6 +138,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/replaceRoutes",
       "payload": {
@@ -167,7 +171,7 @@ describe('handleActions', () => {
     const nextState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -198,15 +202,15 @@ describe('handleActions', () => {
         "@@reduxReactRouter/doesNeedRefresh": true
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_3 evaluation', () => {
     const curState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -237,6 +241,7 @@ describe('handleActions', () => {
         "@@reduxReactRouter/doesNeedRefresh": true
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -264,7 +269,7 @@ describe('handleActions', () => {
     const nextState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -294,15 +299,15 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_4 evaluation', () => {
     const curState = {
       "joinedRooms": {},
       "joiningRooms": {},
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -332,6 +337,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM",
       "roomID": "666"
@@ -341,7 +347,7 @@ describe('handleActions', () => {
       "joiningRooms": {
         "666": true
       },
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -371,8 +377,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_5 evaluation', () => {
@@ -381,7 +387,7 @@ describe('handleActions', () => {
       "joiningRooms": {
         "666": true
       },
-      "topRooms": null,
+      "topRooms": [],
       "ui": {
         "navigationCollapsed": false,
         "previewCollapsed": false,
@@ -411,6 +417,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": []
@@ -450,8 +457,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_REJECT_JOIN_ROOM_6 evaluation', () => {
@@ -490,6 +497,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "REJECT_JOIN_ROOM",
       "description": "Error: Can not find user in unexisted room"
@@ -529,8 +537,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_7 evaluation', () => {
@@ -569,6 +577,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM"
     };
@@ -608,8 +617,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_REJECT_JOIN_ROOM_8 evaluation', () => {
@@ -648,6 +657,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "REJECT_JOIN_ROOM",
       "description": "Error: Can not join to random room"
@@ -687,8 +697,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_INPUT_CHANGE_9 evaluation', () => {
@@ -727,6 +737,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_INPUT_CHANGE",
       "text": "a"
@@ -766,8 +777,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_RESULTS_UPDATE_10 evaluation', () => {
@@ -806,6 +817,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_RESULTS_UPDATE",
       "results": []
@@ -845,8 +857,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_RESULTS_UPDATE_11 evaluation', () => {
@@ -885,6 +897,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_RESULTS_UPDATE",
       "results": null
@@ -924,8 +937,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_12 evaluation', () => {
@@ -964,6 +977,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM",
       "roomID": "a"
@@ -1004,8 +1018,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_JOIN_ROOM_13 evaluation', () => {
@@ -1044,6 +1058,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_JOIN_ROOM",
       "identity": {
@@ -1120,8 +1135,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_14 evaluation', () => {
@@ -1174,6 +1189,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -1255,8 +1271,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_15 evaluation', () => {
@@ -1313,6 +1329,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "a",
@@ -1375,8 +1392,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_16 evaluation', () => {
@@ -1433,6 +1450,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -1500,8 +1518,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_17 evaluation', () => {
@@ -1563,6 +1581,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": "b"
@@ -1625,8 +1644,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_TOGGLE_PREVIEW_18 evaluation', () => {
@@ -1688,6 +1707,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "TOGGLE_PREVIEW"
     };
@@ -1749,8 +1769,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_TOGGLE_PREVIEW_19 evaluation', () => {
@@ -1812,6 +1832,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "TOGGLE_PREVIEW"
     };
@@ -1873,8 +1894,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_20 evaluation', () => {
@@ -1936,6 +1957,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": ""
@@ -1998,8 +2020,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SENT_MESSAGE_21 evaluation', () => {
@@ -2061,6 +2083,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SENT_MESSAGE",
       "pendingID": "pending-message:0",
@@ -2136,8 +2159,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_SENT_MESSAGE_22 evaluation', () => {
@@ -2209,6 +2232,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_SENT_MESSAGE",
       "pendingID": "pending-message:0",
@@ -2284,8 +2308,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_MESSAGE_23 evaluation', () => {
@@ -2357,6 +2381,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_MESSAGE",
       "roomID": "a",
@@ -2435,8 +2460,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_TOGGLE_NAVIGATION_24 evaluation', () => {
@@ -2508,6 +2533,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "TOGGLE_NAVIGATION"
     };
@@ -2579,8 +2605,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_TOGGLE_NAVIGATION_25 evaluation', () => {
@@ -2652,6 +2678,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "TOGGLE_NAVIGATION"
     };
@@ -2723,8 +2750,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_26 evaluation', () => {
@@ -2796,6 +2823,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": "http://www.youtube.com/watch?v=RX761XVVM9o"
@@ -2868,8 +2896,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_27 evaluation', () => {
@@ -2941,6 +2969,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": ""
@@ -3013,8 +3042,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SENT_MESSAGE_28 evaluation', () => {
@@ -3086,6 +3115,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SENT_MESSAGE",
       "pendingID": "pending-message:1",
@@ -3170,8 +3200,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_SENT_MESSAGE_29 evaluation', () => {
@@ -3252,6 +3282,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_SENT_MESSAGE",
       "pendingID": "pending-message:1",
@@ -3336,8 +3367,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_MESSAGE_30 evaluation', () => {
@@ -3418,6 +3449,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_MESSAGE",
       "roomID": "a",
@@ -3505,8 +3537,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_ATTACHMENT_31 evaluation', () => {
@@ -3587,6 +3619,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_ATTACHMENT",
       "roomID": "a",
@@ -3712,8 +3745,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_32 evaluation', () => {
@@ -3816,6 +3849,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -3924,8 +3958,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_33 evaluation', () => {
@@ -4028,6 +4062,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "a",
@@ -4140,8 +4175,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_34 evaluation', () => {
@@ -4248,6 +4283,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -4360,8 +4396,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_MESSAGE_35 evaluation', () => {
@@ -4468,6 +4504,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_MESSAGE",
       "roomID": "a",
@@ -4590,8 +4627,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_36 evaluation', () => {
@@ -4707,6 +4744,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -4839,8 +4877,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_ROOM_37 evaluation', () => {
@@ -4952,6 +4990,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_ROOM",
       "roomID": "a"
@@ -4996,8 +5035,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_38 evaluation', () => {
@@ -5041,6 +5080,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -5090,8 +5130,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_39 evaluation', () => {
@@ -5135,6 +5175,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM",
       "roomID": "a"
@@ -5180,8 +5221,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_JOIN_ROOM_40 evaluation', () => {
@@ -5225,6 +5266,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_JOIN_ROOM",
       "identity": {
@@ -5366,8 +5408,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_41 evaluation', () => {
@@ -5457,6 +5499,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -5575,8 +5618,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_42 evaluation', () => {
@@ -5670,6 +5713,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "a",
@@ -5769,8 +5813,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_43 evaluation', () => {
@@ -5864,6 +5908,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -5963,8 +6008,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_USER_44 evaluation', () => {
@@ -6058,6 +6103,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_USER",
       "roomID": "a",
@@ -6149,8 +6195,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_45 evaluation', () => {
@@ -6240,6 +6286,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -6335,8 +6382,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_46 evaluation', () => {
@@ -6426,6 +6473,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -6531,8 +6579,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_47 evaluation', () => {
@@ -6627,6 +6675,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM",
       "roomID": "b"
@@ -6723,8 +6772,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_JOIN_ROOM_48 evaluation', () => {
@@ -6819,6 +6868,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_JOIN_ROOM",
       "identity": {
@@ -6961,8 +7011,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_49 evaluation', () => {
@@ -7074,6 +7124,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -7210,8 +7261,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_50 evaluation', () => {
@@ -7323,6 +7374,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "b",
@@ -7440,8 +7492,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_51 evaluation', () => {
@@ -7553,6 +7605,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -7675,8 +7728,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_52 evaluation', () => {
@@ -7788,6 +7841,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": "z"
@@ -7900,8 +7954,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_ROOM_INPUT_CHANGE_53 evaluation', () => {
@@ -8013,6 +8067,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "ROOM_INPUT_CHANGE",
       "text": ""
@@ -8125,8 +8180,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SENT_MESSAGE_54 evaluation', () => {
@@ -8238,6 +8293,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SENT_MESSAGE",
       "pendingID": "pending-message:2",
@@ -8363,8 +8419,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_SENT_MESSAGE_55 evaluation', () => {
@@ -8486,6 +8542,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_SENT_MESSAGE",
       "pendingID": "pending-message:2",
@@ -8611,8 +8668,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_MESSAGE_56 evaluation', () => {
@@ -8734,6 +8791,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_MESSAGE",
       "roomID": "b",
@@ -8862,8 +8920,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_NEW_MESSAGE_57 evaluation', () => {
@@ -8985,6 +9043,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "NEW_MESSAGE",
       "roomID": "b",
@@ -9122,8 +9181,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_USER_58 evaluation', () => {
@@ -9254,6 +9313,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_USER",
       "roomID": "b",
@@ -9382,8 +9442,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_59 evaluation', () => {
@@ -9510,6 +9570,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -9647,8 +9708,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_60 evaluation', () => {
@@ -9775,6 +9836,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -9918,8 +9980,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_ROOM_61 evaluation', () => {
@@ -10042,6 +10104,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_ROOM",
       "roomID": "b"
@@ -10133,8 +10196,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_62 evaluation', () => {
@@ -10225,6 +10288,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -10316,8 +10380,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_ROOM_63 evaluation', () => {
@@ -10403,6 +10467,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_ROOM",
       "roomID": "a"
@@ -10447,8 +10512,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_64 evaluation', () => {
@@ -10492,6 +10557,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": []
@@ -10531,8 +10597,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_INPUT_CHANGE_65 evaluation', () => {
@@ -10571,6 +10637,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_INPUT_CHANGE",
       "text": ""
@@ -10610,8 +10677,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_RESULTS_UPDATE_66 evaluation', () => {
@@ -10650,6 +10717,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_RESULTS_UPDATE",
       "results": null
@@ -10689,8 +10757,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_INPUT_CHANGE_67 evaluation', () => {
@@ -10729,6 +10797,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_INPUT_CHANGE",
       "text": "c"
@@ -10768,8 +10837,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_RESULTS_UPDATE_68 evaluation', () => {
@@ -10808,6 +10877,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_RESULTS_UPDATE",
       "results": []
@@ -10847,8 +10917,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_SEARCH_RESULTS_UPDATE_69 evaluation', () => {
@@ -10887,6 +10957,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "SEARCH_RESULTS_UPDATE",
       "results": null
@@ -10926,8 +10997,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_70 evaluation', () => {
@@ -10966,6 +11037,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM",
       "roomID": "c"
@@ -11006,8 +11078,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_JOIN_ROOM_71 evaluation', () => {
@@ -11046,6 +11118,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_JOIN_ROOM",
       "identity": {
@@ -11122,8 +11195,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_72 evaluation', () => {
@@ -11176,6 +11249,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -11257,8 +11331,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_73 evaluation', () => {
@@ -11315,6 +11389,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "c",
@@ -11377,8 +11452,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_74 evaluation', () => {
@@ -11435,6 +11510,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -11502,8 +11578,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_75 evaluation', () => {
@@ -11565,6 +11641,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "c",
@@ -11636,8 +11713,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_76 evaluation', () => {
@@ -11703,6 +11780,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -11774,8 +11852,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_77 evaluation', () => {
@@ -11841,6 +11919,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -11923,8 +12002,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_LEAVE_ROOM_78 evaluation', () => {
@@ -11986,6 +12065,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "LEAVE_ROOM",
       "roomID": "c"
@@ -12030,8 +12110,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_79 evaluation', () => {
@@ -12075,6 +12155,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -12124,8 +12205,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOINING_ROOM_80 evaluation', () => {
@@ -12169,6 +12250,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOINING_ROOM"
     };
@@ -12213,8 +12295,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_CONFIRM_JOIN_ROOM_81 evaluation', () => {
@@ -12259,6 +12341,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "CONFIRM_JOIN_ROOM",
       "identity": {
@@ -12352,8 +12435,8 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_@@reduxReactRouter/routerDidChange_82 evaluation', () => {
@@ -12416,6 +12499,7 @@ describe('handleActions', () => {
         "components": [null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "@@reduxReactRouter/routerDidChange",
       "payload": {
@@ -12507,8 +12591,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_JOIN_USER_83 evaluation', () => {
@@ -12575,6 +12659,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "JOIN_USER",
       "roomID": "c",
@@ -12647,8 +12732,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
   it('check computedState_UPDATE_TOP_ROOMS_84 evaluation', () => {
@@ -12715,6 +12800,7 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
+    const iState = Immutable.fromJS(curState);
     const action = {
       "type": "UPDATE_TOP_ROOMS",
       "rooms": [{
@@ -12787,8 +12873,8 @@ describe('handleActions', () => {
         "components": [null, null, null]
       }
     };
-    const computedNextState = reducer(curState, action);
-    expect(computedNextState).to.deep.equal(nextState);
+    const computedNextState = reducer(iState, action);
+    expect(computedNextState.toJS()).to.deep.equal(nextState);
   });
 
 

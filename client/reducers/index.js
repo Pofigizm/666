@@ -1,17 +1,17 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux-immutablejs';
 
 import joinedRooms from './joined-rooms';
 import joiningRooms from './joining-rooms';
 import topRooms from './top-rooms';
 import ui from './ui';
 
-import { routerStateReducer } from 'redux-router';
+import router from './immutableRouteReducer';
 
 export default combineReducers({
   joinedRooms,
   joiningRooms,
   topRooms,
   ui,
-  router: routerStateReducer,
+  router,
 });
 

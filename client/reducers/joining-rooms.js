@@ -1,28 +1,20 @@
 import * as actions from '../actions';
+import { Map } from 'immutable';
 
 /*
-  joiningRooms: HashMap('roomID', bool)
+  joiningRooms: Map('roomID', bool)
 */
 
-export default (state = {}, action) => {
+export default (state = Map({}), action) => {
   switch (action.type) {
-    case actions.JOINING_ROOM: {
-      return {
-        ...state,
-        [action.roomID]: true,
-      };
-    }
-    case actions.CONFIRM_JOIN_ROOM: {
-      const newState = Object.assign(state);
-      delete newState[action.room.roomID];
-      return newState;
-    }
-    case actions.REJECT_JOIN_ROOM: {
-      const newState = Object.assign(state);
-      delete newState[action.roomID];
-      return newState;
-    }
-    default: return state;
+    case actions.JOINING_ROOM:
+      return state.set(action.roomID, true);
+    case actions.CONFIRM_JOIN_ROOM:
+      return state.remove(action.room.roomID);
+    case actions.REJECT_JOIN_ROOM:
+      return state.remove(action.roomID);
+    default:
+      return state;
   }
 };
 
