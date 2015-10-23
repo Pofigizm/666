@@ -10,7 +10,7 @@ export default {
   debug: false,
   cache: false,
   entry: [
-    './client/main',
+    './client',
   ],
   output: {
     path: path.join(root, 'build/static'),

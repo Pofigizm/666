@@ -11,7 +11,7 @@ export default {
   entry: [
     'webpack-hot-middleware/client',
     'webpack/hot/only-dev-server',
-    './client/main',
+    './client',
   ],
   output: {
     path: path.join(root, 'build/client'),
