@@ -5,7 +5,6 @@ import { reduxReactRouter } from 'redux-router';
 
 import { writeState } from './storage';
 import createHistory from 'history/lib/createBrowserHistory';
-// import { fromJS } from 'immutable';
 
 const middlewares = [
   thunkMiddleware,
@@ -13,16 +12,13 @@ const middlewares = [
   writeState,
 ];
 
-let enhancers;
-/*
-const fromImmutable = next => (reducers, previous) => {
-  return next(reducers, previous.toJS());
+const routerStateSelector = state => {
+  const plainState = state.toJS().router;
+  return Object.keys(plainState).length ? plainState : null;
 };
 
-const toImmutable = next => (reducers, previous) => {
-  return next(reducers, fromJS(previous));
-};
-*/
+let enhancers;
+
 if (__DEV__) {
   const { persistState } = require('redux-devtools');
   const DevTools = require('./components/DevTools');
@@ -40,7 +36,7 @@ if (__DEV__) {
 
   enhancers = compose(
     applyMiddleware(...middlewares, logger),
-    reduxReactRouter({ createHistory }),
+    reduxReactRouter({ createHistory, routerStateSelector }),
     DevTools.instrument(),
     persistState(debugSession)
   );

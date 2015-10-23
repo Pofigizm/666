@@ -24,18 +24,14 @@ const lastState = readState();
 
 const app = (
   <Provider store={store}>
-    <App />
-  </Provider>
-);
-
-/*
     <ReduxRouter>
       <Route path="/" component={App}>
         <Route path="/room/:roomID" component={RoomEntrance}/>
         <Route path="*" component={NotFound}/>
       </Route>
     </ReduxRouter>
-*/
+  </Provider>
+);
 
 transport.onMessage(data =>
     store.dispatch(newMessage(data)));

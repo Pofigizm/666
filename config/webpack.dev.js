@@ -7,7 +7,7 @@ console.log('Root folder is', root);
 
 export default {
   debug: true,
-  devtool: 'eval',
+  devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
     'webpack/hot/only-dev-server',
