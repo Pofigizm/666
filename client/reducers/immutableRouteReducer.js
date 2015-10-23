@@ -12,7 +12,7 @@ const DOES_NEED_REFRESH = '@@reduxReactRouter/doesNeedRefresh';
  * @return {Object} New state
  */
 
-export default (state = Map({}), action) => {
+export default (state = Map(), action) => {
   switch (action.type) {
     case ROUTER_DID_CHANGE:
       return Map(action.payload);

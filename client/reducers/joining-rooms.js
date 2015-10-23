@@ -5,7 +5,7 @@ import { Map } from 'immutable';
   joiningRooms: Map('roomID', bool)
 */
 
-export default (state = Map({}), action) => {
+export default (state = Map(), action) => {
   switch (action.type) {
     case actions.JOINING_ROOM:
       return state.set(action.roomID, true);

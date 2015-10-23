@@ -32,6 +32,7 @@ if (__DEV__) {
     predicate: (_, action) =>
       action.type !== 'ROOM_INPUT_CHANGE' &&
       action.type !== 'SEARCH_INPUT_CHANGE',
+    transformer: (state) => state.toJS(),
   });
 
   enhancers = compose(

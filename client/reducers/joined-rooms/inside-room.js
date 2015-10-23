@@ -18,9 +18,7 @@ function leaveUser(room, action) {
 function newMessage(room, action) {
   const { userID, messageID } = action.message;
   const { message } = action;
-  if (room.get('userID') === userID) { // ignore our message
-    return room;
-  }
+  if (room.get('userID') === userID) return room;
 
   return room
     .update('orderedMessages', om => om.push(messageID))
@@ -35,10 +33,7 @@ function newMessage(room, action) {
 function newAttachment(room, action) {
   const { messageID, meta, index, url } = action;
   const attachment = Map({ meta, index, url });
-  if (!room.hasIn(['roomMessages', messageID])) {
-    // TODO handle situation;
-    console.log('newAttachment could not find the messageID: `${messageID}`');
-  }
+  if (!room.hasIn(['roomMessages', messageID])) return room;
 
   return room
     .updateIn(
@@ -71,6 +66,8 @@ function sentMessage(room, action) {
 function confirmSentMessage(room, action) {
   const { pendingID, messageID, text } = action;
   const index = room.get('orderedMessages').indexOf(pendingID);
+  if (!room.hasIn(['roomMessages', pendingID])) return room;
+
   const message = room
     .getIn(['roomMessages', pendingID])
     .set('status', 'confirmed')
@@ -114,14 +111,13 @@ function rejectSentMessage(room, action) {
   });
 */
 
-export default (state = {}, action) => {
+export default (state = Map({}), action) => {
   function inside(reducer) {
     const { roomID } = action;
-    if (!state.has(roomID)) {
-      console.log(`rooms ${action.type}: unexpected roomID "${roomID}"`);
-      return state;
-    }
-    return state.update(roomID, room => reducer(room, action));
+    if (!state.has(roomID)) return state;
+
+    return state
+      .update(roomID, room => reducer(room, action));
   }
 
   switch (action.type) {

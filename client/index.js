@@ -27,11 +27,11 @@ const { dispatch } = store;
 
 RenderComponents(store);
 
-onMessage(     data => dispatch( newMessage(data)    ) );
-onAttachment(  data => dispatch( newAttachment(data) ) );
-onJoinUser(    data => dispatch( joinUser(data)      ) );
-onLeaveUser(   data => dispatch( leaveUser(data)     ) );
-onTopRooms( ({rms}) => dispatch( updateTopRooms(rms) ) );
+onMessage(       data => dispatch( newMessage(data)      ) );
+onAttachment(    data => dispatch( newAttachment(data)   ) );
+onJoinUser(      data => dispatch( joinUser(data)        ) );
+onLeaveUser(     data => dispatch( leaveUser(data)       ) );
+onTopRooms( ({rooms}) => dispatch( updateTopRooms(rooms) ) );
 
 dispatch( restoreState(last) );
 
