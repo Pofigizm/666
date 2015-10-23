@@ -2,3 +2,4 @@ node_modules
 build
 server/mock
 **/*.test.js
+libs/

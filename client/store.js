@@ -43,7 +43,7 @@ if (__DEV__) {
 } else {
   enhancers = compose(
     applyMiddleware(...middlewares),
-    reduxReactRouter({ createHistory })
+    reduxReactRouter({ createHistory, routerStateSelector })
   );
 }
 

@@ -43,7 +43,8 @@ export default (previous = Map({}), action) => {
               nick,
             })),
             Map({}));
-      const orderedMessages = room.messages.map(({messageID}) => messageID);
+      const orderedMessages = room.messages
+        .reduce((res, {messageID}) => res.push(messageID), List());
       const roomMessages = room.messages
         .reduce(
           (result, {userID: thatUserID, messageID, text, time}, index) =>

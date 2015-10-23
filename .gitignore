@@ -18,3 +18,4 @@ logs/
 build/
 docker/dependensy/data/
 .vscode/
+libs/
