@@ -68,7 +68,7 @@ const leaveRoom = request => () => actions.leaveRoom(request)
     ];
   });
 
-const message = request => () => actions.message(request)
+const sendMessage = request => () => actions.message(request)
   .then(({data, metas}) => {
     const {roomID} = data;
     const channel = `room:${roomID}`;
@@ -77,8 +77,8 @@ const message = request => () => actions.message(request)
         .then(metaData => {
           return {
             type: 'roomcast',
-            channel,
             event: 'attachment',
+            channel,
             data: metaData,
           };
         });
@@ -89,6 +89,7 @@ const message = request => () => actions.message(request)
       data,
     }, {
       type: 'roomcast',
+      event: 'message',
       channel,
       data,
     },
@@ -108,7 +109,7 @@ export const handlers = {
   createRoom,
   joinRoom,
   leaveRoom,
-  message,
+  sendMessage,
   searchRoomID,
 };
 

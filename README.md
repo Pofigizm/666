@@ -294,7 +294,7 @@ npm run dock
 :white_check_mark: | :white_check_mark:
 
 
-#### `message`
+#### `sendMessage`
 * Я хотел бы отправить сообщение комнате roomID.
 * Да, пожалуйста. Ваше сообщение успешно добавленно.
 

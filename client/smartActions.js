@@ -1,5 +1,5 @@
 import * as actions from './actions';
-import * as transport from './transport';
+import { exchange } from './transport';
 import validRoomID from '../common/RoomID';
 import { pushState } from 'redux-router';
 
@@ -7,7 +7,7 @@ export const searchInputChange = partialRoomID => dispatch => {
   if (validRoomID(partialRoomID) || partialRoomID.length === 0) {
     dispatch(actions.searchInputChange(partialRoomID));
     if (partialRoomID.length > 0) {
-      transport.searchRoomID(partialRoomID)
+      exchange.searchRoomID({partialRoomID})
         .then(data =>
           dispatch(actions.searchResultsUpdate(data))
         , description =>
@@ -24,7 +24,7 @@ export const searchInputChange = partialRoomID => dispatch => {
 // returns a Promise(roomID || null)
 export const joinRoom = ({roomID, userID, secret}) => dispatch => {
   dispatch(actions.joiningRoom(roomID));
-  return transport.joinRoom({roomID, userID, secret})
+  return exchange.joinRoom({roomID, userID, secret})
     .then(
       data => {
         dispatch(actions.confirmJoinRoom(data));
@@ -74,7 +74,7 @@ export const switchToRoom = (history, roomID) => (dispatch, getState) => {
 
 export const createRoom = (history, roomID) => dispatch => {
   if (validRoomID(roomID)) {
-    transport.createRoom(roomID)
+    exchange.createRoom({roomID})
       .then(() => {
         dispatch(actions.searchResultsUpdate(null));
         dispatch(switchToRoom(history, roomID));
@@ -99,7 +99,7 @@ export const leaveRoom = (history, roomID) => (dispatch, getState) => {
     dispatch(pushState(history, `/`));
   }
   dispatch(actions.leaveRoom(roomID));
-  transport.leaveRoom({roomID, userID, secret});
+  exchange.leaveRoom({roomID, userID, secret});
   // TODO handle replies?
 };
 
@@ -127,7 +127,7 @@ export const sendMessage = () => (dispatch, getState) => {
   dispatch(actions.roomInputChange(''));
   const pendingID = `pending-message:${newPendingID()}`;
   dispatch(actions.sentMessage(pendingID, message));
-  transport.message(message)
+  exchange.sendMessage(message)
     .then(data =>
       dispatch(actions.confirmSentMessage(pendingID, data))
         , description =>

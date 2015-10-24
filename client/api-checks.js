@@ -99,8 +99,7 @@ export const leaveRoom = wrap('leaveRoom', res => {
   return true;
 });
 
-// FIXME имя не совпадает с API, т.к. message уже есть выше.
-export const messageExchange = wrap('messageExchange', res => {
+export const sendMessage = wrap('sendMessage', res => {
   throwWhen(res instanceof Object);
   if (res.status === 'OK') {
     throwWhen(res.data instanceof Object);

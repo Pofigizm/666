@@ -103,7 +103,7 @@ export function leaveUser({roomID, userID}) {
   };
 }
 
-export function updateTopRooms(rooms) {
+export function updateTopRooms({rooms}) {
   return {
     type: UPDATE_TOP_ROOMS,
     rooms,

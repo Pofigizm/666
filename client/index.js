@@ -5,13 +5,7 @@ import create from './store';
 import { restoreState } from './smartActions';
 import { readState } from './storage';
 
-import {
-  onMessage,
-  onAttachment,
-  onJoinUser,
-  onLeaveUser,
-  onTopRooms,
-} from './transport';
+import { broadcast, roomcast } from './transport';
 
 import {
   updateTopRooms,
@@ -27,11 +21,11 @@ const { dispatch } = store;
 
 RenderComponents(store);
 
-onMessage(       data => dispatch( newMessage(data)      ) );
-onAttachment(    data => dispatch( newAttachment(data)   ) );
-onJoinUser(      data => dispatch( joinUser(data)        ) );
-onLeaveUser(     data => dispatch( leaveUser(data)       ) );
-onTopRooms( ({rooms}) => dispatch( updateTopRooms(rooms) ) );
+roomcast.message(    data => dispatch( newMessage(data)     ) );
+roomcast.attachment( data => dispatch( newAttachment(data)  ) );
+roomcast.joinUser(   data => dispatch( joinUser(data)       ) );
+roomcast.leaveUser(  data => dispatch( leaveUser(data)      ) );
+broadcast.topRooms(  data => dispatch( updateTopRooms(data) ) );
 
 dispatch( restoreState(last) );
 
