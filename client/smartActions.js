@@ -3,7 +3,7 @@ import { exchange } from './transport';
 import validRoomID from '../common/RoomID';
 import { pushState } from 'redux-router';
 
-export const searchInputChange = partialRoomID => dispatch => {
+export const searchInputChange = (history, partialRoomID) => dispatch => {
   if (validRoomID(partialRoomID) || partialRoomID.length === 0) {
     dispatch(actions.searchInputChange(partialRoomID));
     if (partialRoomID.length > 0) {
