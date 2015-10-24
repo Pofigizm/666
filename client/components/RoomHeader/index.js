@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { toggleNavigation } from '../../actions';
 
 const RoomHeader = ({ dispatch, navigationCollapsed, room }) => {
-  const { roomName } = room;
+  const { name } = room;
   const { nick, avatar } = room.roomUsers[room.userID] || {}; // TODO fix it
 
   return (
@@ -20,7 +20,7 @@ const RoomHeader = ({ dispatch, navigationCollapsed, room }) => {
           </i>
         </li>
         <li className="room-header-bar-item">
-          <h4 className="room-name">#{roomName}</h4>
+          <h4 className="room-name">#{name}</h4>
         </li>
       </ul>
       <ul className="room-header-bar">

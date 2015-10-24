@@ -94,7 +94,7 @@ function rejectSentMessage(room, action) {
   joinedRooms: HashMap('roomID', {
     userID: string,
     secret: string,
-    roomName: string,
+    name: string,
     roomUsers: HashMap('userID', {
       avatar: string,
       nick: string,

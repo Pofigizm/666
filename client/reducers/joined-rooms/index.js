@@ -6,7 +6,7 @@ import { Map, List } from 'immutable';
   joinedRooms: HashMap('roomID', {
     userID: string,
     secret: string,
-    roomName: string,
+    name: string,
     roomUsers: HashMap('userID', {
       avatar: string,
       nick: string,
@@ -32,9 +32,8 @@ export default (previous = Map({}), action) => {
       return state.remove(action.roomID);
     case actions.CONFIRM_JOIN_ROOM: {
       const { room, identity } = action;
-      const { roomID } = room;
+      const { roomID, name } = room;
       const { userID, secret } = identity;
-      const roomName = room.name;
       const roomUsers = room.users
         .reduce(
           (result, {userID: thatUserID, avatar, nick} ) =>
@@ -62,7 +61,7 @@ export default (previous = Map({}), action) => {
       return state.set(roomID, Map({
         userID,
         secret,
-        roomName,
+        name,
         roomUsers,
         roomMessages,
         orderedMessages,
