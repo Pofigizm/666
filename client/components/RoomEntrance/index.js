@@ -11,7 +11,7 @@ function onClick(e, handler) {
 
 const RoomEntrance = ({ roomLoading, roomLoaded, room, roomID, dispatch }) => {
   if (roomLoaded) {
-    return <Room room={room} />;
+    return <Room room={room.toJS()} />;
   } else if (roomLoading) {
     return ( <div className="splash">
       <article className="article">
@@ -41,16 +41,13 @@ const RoomEntrance = ({ roomLoading, roomLoaded, room, roomID, dispatch }) => {
     </div> );
 };
 
-export default connect(immState => {
-  const state = immState.toJS();
-  const { roomID } = state.router.params;
-  const room = state.joinedRooms[roomID];
-  const roomLoading = state.joiningRooms[roomID];
-  const roomLoaded = !!room;
+export default connect(state => {
+  const roomID = state.getIn(['router', 'params', 'roomID']);
   return {
-    roomLoading,
-    roomLoaded,
-    room,
+    roomLoading: state.hasIn(['joiningRooms', roomID]),
+    roomLoaded: state.hasIn(['joinedRooms', roomID]),
+    // TODO connect part of room by self
+    room: state.getIn(['joinedRooms', roomID]),
     roomID,
   };
 })(RoomEntrance);

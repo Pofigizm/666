@@ -1,4 +1,4 @@
-import { Map } from 'immutable';
+import { Map, fromJS } from 'immutable';
 
 const ROUTER_DID_CHANGE = '@@reduxReactRouter/routerDidChange';
 const REPLACE_ROUTES = '@@reduxReactRouter/replaceRoutes';
@@ -15,7 +15,7 @@ const DOES_NEED_REFRESH = '@@reduxReactRouter/doesNeedRefresh';
 export default (state = Map(), action) => {
   switch (action.type) {
     case ROUTER_DID_CHANGE:
-      return Map(action.payload);
+      return fromJS(action.payload);
     case REPLACE_ROUTES:
       return state.set(DOES_NEED_REFRESH, true);
     default:

@@ -20,7 +20,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {}
     };
@@ -38,7 +38,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {}
     };
@@ -76,7 +76,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -114,7 +114,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -177,7 +177,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -216,7 +216,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -275,7 +275,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -313,7 +313,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -353,7 +353,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -393,7 +393,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -433,7 +433,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -473,7 +473,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -513,7 +513,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -553,7 +553,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -593,7 +593,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -633,7 +633,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -673,7 +673,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -713,7 +713,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -753,7 +753,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -793,7 +793,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -913,7 +913,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -953,7 +953,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -994,7 +994,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1034,7 +1034,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1091,7 +1091,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1111,7 +1111,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1145,7 +1145,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1165,7 +1165,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1223,7 +1223,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1243,7 +1243,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1281,7 +1281,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1301,7 +1301,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1344,7 +1344,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1364,7 +1364,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1402,7 +1402,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1422,7 +1422,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1465,7 +1465,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1490,7 +1490,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1528,7 +1528,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1553,7 +1553,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1591,7 +1591,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1616,7 +1616,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1654,7 +1654,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1679,7 +1679,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1716,7 +1716,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1741,7 +1741,7 @@ describe('handleActions', () => {
         "previewCollapsed": true,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1779,7 +1779,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1804,7 +1804,7 @@ describe('handleActions', () => {
         "previewCollapsed": true,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1841,7 +1841,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1866,7 +1866,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1904,7 +1904,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1929,7 +1929,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "b",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -1967,7 +1967,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -1992,7 +1992,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2030,7 +2030,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2055,7 +2055,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2096,7 +2096,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2131,7 +2131,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2169,7 +2169,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2204,7 +2204,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2245,7 +2245,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2280,7 +2280,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2318,7 +2318,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2353,7 +2353,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2397,7 +2397,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2432,7 +2432,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2470,7 +2470,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2505,7 +2505,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2542,7 +2542,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2577,7 +2577,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2615,7 +2615,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2650,7 +2650,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2687,7 +2687,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2722,7 +2722,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2760,7 +2760,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2795,7 +2795,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2833,7 +2833,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2868,7 +2868,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "http://www.youtube.com/watch?v=RX761XVVM9o",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2906,7 +2906,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -2941,7 +2941,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "http://www.youtube.com/watch?v=RX761XVVM9o",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -2979,7 +2979,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3014,7 +3014,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3052,7 +3052,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3087,7 +3087,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3128,7 +3128,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3172,7 +3172,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3210,7 +3210,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3254,7 +3254,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3295,7 +3295,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3339,7 +3339,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3377,7 +3377,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3421,7 +3421,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3465,7 +3465,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3509,7 +3509,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3547,7 +3547,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3591,7 +3591,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3651,7 +3651,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3717,7 +3717,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3755,7 +3755,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3821,7 +3821,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3864,7 +3864,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -3930,7 +3930,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -3968,7 +3968,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4034,7 +4034,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4077,7 +4077,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4147,7 +4147,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4185,7 +4185,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4255,7 +4255,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4298,7 +4298,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4368,7 +4368,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4406,7 +4406,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4476,7 +4476,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4520,7 +4520,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4599,7 +4599,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4637,7 +4637,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4716,7 +4716,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4774,7 +4774,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4853,7 +4853,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -4887,7 +4887,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218",
           "secret": "bd15b411-578a-4d92-a13f-57ef856d76b9",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=fbd3820e-6fdf-4902-9c1f-3e2d8c0ca218&s=male&size=64",
@@ -4966,7 +4966,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5011,7 +5011,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5056,7 +5056,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5106,7 +5106,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5151,7 +5151,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5197,7 +5197,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5242,7 +5242,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5327,7 +5327,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5384,7 +5384,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5418,7 +5418,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5475,7 +5475,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5533,7 +5533,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5590,7 +5590,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5628,7 +5628,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5685,7 +5685,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5728,7 +5728,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5785,7 +5785,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5823,7 +5823,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5880,7 +5880,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -5923,7 +5923,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -5980,7 +5980,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6018,7 +6018,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "5f08bf6b-3b0c-425b-97a3-e5acecdaf23d": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=5f08bf6b-3b0c-425b-97a3-e5acecdaf23d&s=male&size=64",
@@ -6075,7 +6075,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6114,7 +6114,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6167,7 +6167,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6205,7 +6205,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6258,7 +6258,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6301,7 +6301,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6354,7 +6354,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6392,7 +6392,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6445,7 +6445,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6493,7 +6493,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6551,7 +6551,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6589,7 +6589,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6647,7 +6647,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6685,7 +6685,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6744,7 +6744,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6782,7 +6782,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6840,7 +6840,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -6908,7 +6908,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -6949,7 +6949,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -6983,7 +6983,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7021,7 +7021,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7062,7 +7062,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7096,7 +7096,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7158,7 +7158,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7199,7 +7199,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7233,7 +7233,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7271,7 +7271,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7312,7 +7312,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7346,7 +7346,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7389,7 +7389,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7430,7 +7430,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7464,7 +7464,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7502,7 +7502,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7543,7 +7543,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7577,7 +7577,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7625,7 +7625,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7666,7 +7666,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7700,7 +7700,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7738,7 +7738,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7779,7 +7779,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7813,7 +7813,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7851,7 +7851,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -7892,7 +7892,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -7926,7 +7926,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "z",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -7964,7 +7964,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8005,7 +8005,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8039,7 +8039,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "z",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8077,7 +8077,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8118,7 +8118,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8152,7 +8152,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8190,7 +8190,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8231,7 +8231,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8265,7 +8265,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8306,7 +8306,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8347,7 +8347,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8391,7 +8391,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8429,7 +8429,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8470,7 +8470,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8514,7 +8514,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8555,7 +8555,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8596,7 +8596,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8640,7 +8640,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8678,7 +8678,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8719,7 +8719,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8763,7 +8763,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8807,7 +8807,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8848,7 +8848,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -8892,7 +8892,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -8930,7 +8930,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -8971,7 +8971,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -9015,7 +9015,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9059,7 +9059,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9100,7 +9100,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -9153,7 +9153,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9191,7 +9191,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9232,7 +9232,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "cf5c4904-406a-4483-a35d-07fe82b010d8": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cf5c4904-406a-4483-a35d-07fe82b010d8&s=female&size=64",
@@ -9285,7 +9285,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9324,7 +9324,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9365,7 +9365,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -9414,7 +9414,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9452,7 +9452,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9493,7 +9493,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -9542,7 +9542,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9590,7 +9590,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9631,7 +9631,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -9680,7 +9680,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9718,7 +9718,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9759,7 +9759,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -9808,7 +9808,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9866,7 +9866,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -9907,7 +9907,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -9956,7 +9956,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -9990,7 +9990,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -10031,7 +10031,7 @@ describe('handleActions', () => {
         "b": {
           "userID": "94b59696-24c1-40fc-b669-991e5cfe5bca",
           "secret": "8abf0dbe-d1ec-4c60-b4ae-c0e811fb4f0b",
-          "roomName": "b",
+          "name": "b",
           "roomUsers": {
             "94b59696-24c1-40fc-b669-991e5cfe5bca": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=94b59696-24c1-40fc-b669-991e5cfe5bca&s=male&size=64",
@@ -10080,7 +10080,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10114,7 +10114,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -10172,7 +10172,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10206,7 +10206,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -10264,7 +10264,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10303,7 +10303,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -10356,7 +10356,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10390,7 +10390,7 @@ describe('handleActions', () => {
         "a": {
           "userID": "cef67dfc-2e9e-43bd-9076-cc7a2fd71583",
           "secret": "ee19e318-612c-400f-9a1b-2b187aa4f370",
-          "roomName": "a",
+          "name": "a",
           "roomUsers": {
             "cef67dfc-2e9e-43bd-9076-cc7a2fd71583": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=cef67dfc-2e9e-43bd-9076-cc7a2fd71583&s=female&size=64",
@@ -10443,7 +10443,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10488,7 +10488,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10533,7 +10533,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10573,7 +10573,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10613,7 +10613,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "a",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10653,7 +10653,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10693,7 +10693,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10733,7 +10733,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10773,7 +10773,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10813,7 +10813,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10853,7 +10853,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -10973,7 +10973,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11013,7 +11013,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11054,7 +11054,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11094,7 +11094,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11151,7 +11151,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11171,7 +11171,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11205,7 +11205,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11225,7 +11225,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11283,7 +11283,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11303,7 +11303,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11341,7 +11341,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11361,7 +11361,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11404,7 +11404,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11424,7 +11424,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11462,7 +11462,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11482,7 +11482,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11525,7 +11525,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11550,7 +11550,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11588,7 +11588,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11613,7 +11613,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11656,7 +11656,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11685,7 +11685,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11723,7 +11723,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11752,7 +11752,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11795,7 +11795,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11824,7 +11824,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11862,7 +11862,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11891,7 +11891,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -11949,7 +11949,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -11978,7 +11978,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12012,7 +12012,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "4f8c3f47-b528-4b7d-b333-22311fd628ee",
           "secret": "248049db-8459-4fcd-b03d-b845582acb07",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "4f8c3f47-b528-4b7d-b333-22311fd628ee": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=4f8c3f47-b528-4b7d-b333-22311fd628ee&s=male&size=64",
@@ -12041,7 +12041,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12086,7 +12086,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12131,7 +12131,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12181,7 +12181,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12226,7 +12226,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12271,7 +12271,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12317,7 +12317,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12381,7 +12381,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12411,7 +12411,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12445,7 +12445,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12475,7 +12475,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12533,7 +12533,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12563,7 +12563,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12601,7 +12601,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12631,7 +12631,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12674,7 +12674,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12704,7 +12704,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12742,7 +12742,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12772,7 +12772,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {
@@ -12815,7 +12815,7 @@ describe('handleActions', () => {
         "c": {
           "userID": "3f508465-47d0-40f6-85ba-f317241cb958",
           "secret": "d8153f9f-3a8b-4277-8041-77aca8549dc9",
-          "roomName": "c",
+          "name": "c",
           "roomUsers": {
             "c5a03bb5-6862-4b9e-b565-c0b8f5253b0a": {
               "avatar": "http://eightbitavatar.herokuapp.com/?id=c5a03bb5-6862-4b9e-b565-c0b8f5253b0a&s=male&size=64",
@@ -12845,7 +12845,7 @@ describe('handleActions', () => {
         "previewCollapsed": false,
         "searchInputText": "c",
         "roomInputText": "",
-        "searchResults": null
+        "searchResults": []
       },
       "router": {
         "routes": [{}, {

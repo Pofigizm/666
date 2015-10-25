@@ -4,7 +4,7 @@ import './index.scss';
 
 import { connect } from 'react-redux';
 import { sendMessage } from '../../smartActions';
-import { roomInputChange, togglePreview } from '../../actions';
+import { roomInputChange } from '../../actions';
 
 function onKeyPress(e, handler) {
   if (e.which === 13 && !e.shiftKey) {
@@ -31,7 +31,7 @@ class RoomInput extends Component {
   }
 
   render() {
-    const { dispatch, text, buttonEnabled, previewCollapsed } = this.props;
+    const { dispatch, text } = this.props;
     return (
       <form className="room-actions"
         onSubmit={e => onClick(e, () => dispatch(sendMessage()))}>
@@ -46,28 +46,17 @@ class RoomInput extends Component {
           value={text}
         ></textarea>
         <button
-          className={`btn ${ previewCollapsed ? 'is-off' : ''}`}
-          onClick={e => onClick(e, () => dispatch(togglePreview()))}
-        > Preview </button>
-        <button
           className="room-actions-send btn"
           type="submit"
           ref="submitBtn"
-          disabled={!buttonEnabled}
+          disabled={!text.length}
         > Send </button>
       </form>
     );
   }
 }
 
-export default connect(immState => {
-  const state = immState.toJS();
-  const text = state.ui.roomInputText;
-  const { previewCollapsed } = state.ui;
+export default connect(state => ({
+  text: state.getIn(['ui', 'roomInputText']),
+}))(RoomInput);
 
-  return {
-    buttonEnabled: !!text,
-    previewCollapsed,
-    text,
-  };
-})(RoomInput);

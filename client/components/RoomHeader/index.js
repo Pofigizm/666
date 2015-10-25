@@ -40,11 +40,7 @@ const RoomHeader = ({ dispatch, navigationCollapsed, room }) => {
   );
 };
 
-export default connect(immState => {
-  const state = immState.toJS();
-  const { navigationCollapsed } = state.ui;
-  return {
-    navigationCollapsed,
-  };
-})(RoomHeader);
+export default connect(state => ({
+  navigationCollapsed: state.getIn(['ui', 'navigationCollapsed']),
+}))(RoomHeader);
 
