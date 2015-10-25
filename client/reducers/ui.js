@@ -1,12 +1,12 @@
 import * as actions from '../actions';
-import { Map } from 'immutable';
+import { Map, List } from 'immutable';
 
 const initialUi = Map({
   navigationCollapsed: false,
   previewCollapsed: false,
   searchInputText: '',
   roomInputText: '',
-  searchResults: null,
+  searchResults: List(),
 });
 
 /*
@@ -32,9 +32,9 @@ export default (state = initialUi, action) => {
       return state;
     }
     case actions.SEARCH_RESULTS_FAILED:
-      return state.set('searchResults', null);
+      return state.set('searchResults', List());
     case actions.SEARCH_RESULTS_UPDATE:
-      return state.set('searchResults', action.results);
+      return state.set('searchResults', List(action.results));
     case actions.SEARCH_INPUT_CHANGE:
       return state.set('searchInputText', action.text);
     case actions.TOGGLE_PREVIEW:

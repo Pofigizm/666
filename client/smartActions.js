@@ -24,6 +24,7 @@ export const searchInputChange = (history, partialRoomID) => dispatch => {
 // returns a Promise(roomID || null)
 export const joinRoom = ({roomID, userID, secret}) => dispatch => {
   dispatch(actions.joiningRoom(roomID));
+  dispatch(searchInputChange(null, ''));
   return exchange.joinRoom({roomID, userID, secret})
     .then(
       data => {
@@ -55,6 +56,7 @@ export const restoreState = state => dispatch => {
 };
 
 export const switchToRoom = (history, roomID) => (dispatch, getState) => {
+  dispatch(searchInputChange(null, ''));
   const state = getState().toJS();
   const routerRoomID = state.router.params && state.router.params.roomID;
   if (roomID && routerRoomID === roomID) return; // do nothing!

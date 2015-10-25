@@ -16,7 +16,7 @@ export default ({
   <div className="navigation-group">
     <h4 className="navigation-group-label">{title}</h4>
     <ul className="navigation-group-list">
-      {collection.map( ({roomID, name, users}, index) =>
+      {collection.toJS().map( ({roomID, name, users}, index) =>
         <li key={index}
             className={
               roomID === routerRoomID ?

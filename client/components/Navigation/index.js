@@ -1,4 +1,5 @@
 import React from 'react';
+import { List } from 'immutable';
 import './index.scss';
 
 import { connect } from 'react-redux';
@@ -9,34 +10,29 @@ import {
   searchInputChange,
 } from '../../smartActions';
 
-import List from './list';
-
-const arrayedRooms = hashedRooms => Object.keys(hashedRooms)
-  .map( roomID => ({
-    ...hashedRooms[roomID],
-    roomID,
-  }));
-
-const wrapper = (dispatch, history, smart) => data =>
-  dispatch( smart(history, data) );
+import NavList from './list';
 
 const Navigation = ({
   dispatch,
   history,
   joinedRooms,
   topRooms,
-  router,
-  ui,
+  routerRoomID,
+  navigationCollapsed,
+  searchInputText,
+  searchResults,
 }) => {
-  const routerRoomID = router.params && router.params.roomID;
-  const { searchResults, searchInputText, navigationCollapsed } = ui;
-  const shouldShowCreation =
-    searchInputText.length > 0 &&
-    searchResults &&
-    !(
-      searchResults[0] &&
-      searchInputText === searchResults[0].roomID
-    );
+  // TODO beautify it (looks wery agly)
+  const creation = (searchInputText.length > 0 &&
+    !searchResults.find(({roomID}) => roomID === searchInputText)) ?
+    List.of({roomID: searchInputText}) : List();
+  const listedRooms = joinedRooms
+    .reduce((res, room, roomID) => res.push({
+      roomID,
+      name: room.get('name'),
+      users: room.get('roomUsers').count(),
+    }), List());
+  const wrapper = smart => data => dispatch( smart(history, data) );
   return (
     <nav className={
       navigationCollapsed ?
@@ -45,52 +41,54 @@ const Navigation = ({
     }>
       <div className="navigation-group">
         <input
-          onChange={e => dispatch(searchInputChange(history, e.target.value))}
+          onChange={e => wrapper(searchInputChange)(e.target.value)}
           value={searchInputText}
           type="text"
           className="input--underline"
           placeholder="# Find / Create new" />
       </div>
-      {!shouldShowCreation ? false :
-        <List
-          collection={[{ roomID: searchInputText }]}
+      {!creation.count() ? false :
+        <NavList
+          collection={creation}
           title="Create Room"
-          action={wrapper(dispatch, history, createRoom)}
+          action={wrapper(createRoom)}
         />
       }
-      {!searchResults || !searchResults.length ? false :
-        <List
+      {!searchResults.count() ? false :
+        <NavList
           collection={searchResults}
           title="Search Results"
           badge
-          action={wrapper(dispatch, history, switchToRoom)}
+          action={wrapper(switchToRoom)}
         />
       }
-      <List
-        collection={arrayedRooms(joinedRooms)}
-        title="Joined"
-        routerRoomID={routerRoomID}
-        action={wrapper(dispatch, history, switchToRoom)}
-        reset={wrapper(dispatch, history, leaveRoom)}
-      />
-      <List
-        collection={topRooms}
-        title="Top Channels"
-        badge
-        action={wrapper(dispatch, history, switchToRoom)}
-      />
+      {!listedRooms.count() ? false :
+        <NavList
+          collection={listedRooms}
+          title="Joined Rooms"
+          routerRoomID={routerRoomID}
+          action={wrapper(switchToRoom)}
+          reset={wrapper(leaveRoom)}
+        />
+      }
+      {!topRooms.count() ? false :
+        <NavList
+          collection={topRooms}
+          title="Top Channels"
+          badge
+          action={wrapper(switchToRoom)}
+        />
+      }
     </nav>
   );
 };
 
-export default connect(state => {
-  const { joinedRooms, topRooms, router, ui } = state.toJS();
-
-  return {
-    joinedRooms,
-    topRooms,
-    router,
-    ui,
-  };
-})(Navigation);
+export default connect(state => ({
+  joinedRooms: state.get('joinedRooms'),
+  topRooms: state.get('topRooms'),
+  routerRoomID: state.getIn(['router', 'params', 'roomID']),
+  navigationCollapsed: state.getIn(['ui', 'navigationCollapsed']),
+  searchInputText: state.getIn(['ui', 'searchInputText']),
+  searchResults: state.getIn(['ui', 'searchResults']),
+}))(Navigation);
 
