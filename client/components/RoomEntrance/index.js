@@ -11,7 +11,7 @@ function onClick(e, handler) {
 
 const RoomEntrance = ({ roomLoading, roomLoaded, room, roomID, dispatch }) => {
   if (roomLoaded) {
-    return <Room room={room.toJS()} />;
+    return <Room room={room.toJS()} roomID={roomID} />;
   } else if (roomLoading) {
     return ( <div className="splash">
       <article className="article">

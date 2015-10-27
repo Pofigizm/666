@@ -1,71 +1,82 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { findDOMNode } from 'react-dom';
 import './index.scss';
 
 import { connect } from 'react-redux';
 import RoomHeader from '../RoomHeader';
 import MessageList from '../MessageList';
-import Message from '../Message';
 import RoomInput from '../RoomInput';
+import { changeViewMessages } from '../../actions';
 
-const Room = ({ room, showPreview, inputText }) => {
-  const { orderedMessages, roomMessages, roomUsers } = room;
-
-  const ourUserID = room.userID;
-  const {nick: ourNick, avatar: ourAvatar} = room.roomUsers[ourUserID];
-
-  const messages = orderedMessages.map(messageID => {
-    const { text, time, userID,
-            status, attachments } = roomMessages[messageID];
-    const { nick, avatar } = roomUsers[userID] ? roomUsers[userID] : {
-      nick: 'Leaved user',
-      avatar: '', // TODO link to our logo with anonym man
-    };
-
-    const isOurMessage = (ourUserID === userID);
-
-    return {
-      text,
-      time,
-      nick,
-      isOurMessage,
-      avatar,
-      status,
-      attachments,
-    };
-  });
-
-  const previewMessage = {
-    text: inputText,
-    time: null,
-    nick: ourNick,
-    avatar: ourAvatar,
-    status: 'preview',
-    attachments: [],
+function debounce(fn, delay) {
+  let timer = null;
+  return function deb(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() =>
+      fn.call(this, ...args), delay);
   };
+}
 
-  return (
-    <div className="room">
-      <RoomHeader room={room} />
-      <div className="room-messages" id="roomMessages">
-        {!showPreview ? false :
-          <div className="room-messages-preview">
-            <Message message={previewMessage} />
-          </div>
-        }
-        <MessageList messages={messages} />
+function scrollHandler(e, handler) {
+  const { clientHeight, scrollTop, scrollHeight } = e.target;
+  handler({ clientHeight, scrollTop, scrollHeight });
+}
+const onScroll = debounce(scrollHandler, 33);
+
+class Room extends Component {
+  componentWillUpdate() {
+    const mess = findDOMNode(this.refs.messages);
+    this.scrollTop = mess.scrollTop;
+  }
+
+  componentDidUpdate() {
+    const { room } = this.props;
+    const mess = findDOMNode(this.refs.messages);
+    const calc = room.scrollCalc;
+    console.log(calc, mess.scrollTop, mess.scrollHeight, this.scrollTop, this.scrollHeight);
+    mess.scrollTop = calc ? this.scrollTop : mess.scrollTop;
+  }
+
+  render() {
+    const { dispatch, room, roomID } = this.props;
+
+    const { viewMessages, roomMessages, roomUsers } = room;
+    const messages = viewMessages.map(messageID => {
+      const { text, time, userID,
+              status, attachments } = roomMessages[messageID];
+      const { nick, avatar } = roomUsers[userID] ? roomUsers[userID] : {
+        nick: 'Leaved user',
+        avatar: '', // TODO link to our logo with anonym man
+      };
+      const isOurMessage = userID === room.userID;
+
+      return {
+        text,
+        time,
+        nick,
+        isOurMessage,
+        avatar,
+        status,
+        attachments,
+      };
+    });
+
+    return (
+      <div className="room">
+        <RoomHeader room={room} />
+        <div
+          className="room-messages"
+          ref="messages"
+          id="roomMessages"
+          onScroll={e => onScroll(e, view => dispatch(changeViewMessages(roomID, view)))}
+        >
+          <MessageList messages={messages} />
+        </div>
+        <RoomInput />
       </div>
-      <RoomInput />
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default connect(immState => {
-  const state = immState.toJS();
-  const inputText = state.ui.roomInputText;
-  const { previewCollapsed } = state.ui;
-  return {
-    showPreview: !!inputText && !previewCollapsed,
-    inputText,
-  };
-})(Room);
+export default connect()(Room);
 
