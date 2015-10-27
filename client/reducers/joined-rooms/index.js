@@ -17,13 +17,16 @@ import { Map, List } from 'immutable';
       text: string,
       time: number,
       index: number,
+      attachments: [],
       status: 'sent' | 'confirmed' | 'rejected',
     }),
     orderedMessages: ['messageID'],
+    scrollCalc: boolean,
+    viewMessages: ['messageID'],
   });
 */
 
-export default (previous = Map({}), action) => {
+export default (previous = Map(), action) => {
   // separate to file
   const state = insideRoom(previous, action);
 
@@ -41,9 +44,10 @@ export default (previous = Map({}), action) => {
               avatar,
               nick,
             })),
-            Map({}));
+            Map());
       const orderedMessages = room.messages
         .reduce((res, {messageID}) => res.push(messageID), List());
+      const viewMessages = orderedMessages.takeLast(10);
       const roomMessages = room.messages
         .reduce(
           (result, {userID: thatUserID, messageID, text, time}, index) =>
@@ -65,6 +69,7 @@ export default (previous = Map({}), action) => {
         roomUsers,
         roomMessages,
         orderedMessages,
+        viewMessages,
       }));
     }
     case actions.REJECT_JOIN_ROOM: {

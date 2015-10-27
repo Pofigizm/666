@@ -17,6 +17,7 @@ export const SEARCH_RESULTS_UPDATE = 'SEARCH_RESULTS_UPDATE';
 export const SEARCH_RESULTS_FAILED = 'SEARCH_RESULTS_FAILED';
 export const CREATE_ROOM_FAILED = 'CREATE_ROOM_FAILED';
 export const JOINING_ROOM = 'JOINING_ROOM';
+export const CHANGE_VIEW_MESSAGES = 'CHANGE_VIEW_MESSAGES';
 
 export function joiningRoom(roomID) {
   return {
@@ -179,6 +180,14 @@ export function rejectSentMessage(pendingID, roomID, description) {
     pendingID,
     roomID,
     description,
+  };
+}
+
+export function changeViewMessages(roomID, view) {
+  return {
+    type: CHANGE_VIEW_MESSAGES,
+    roomID,
+    view,
   };
 }
 

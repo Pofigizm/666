@@ -84,10 +84,65 @@ function rejectSentMessage(room, action) {
   const { pendingID } = action;
 
   return room
-    .updateIn(
+    .setIn(
       ['roomMessages', pendingID, 'status'],
       'rejected'
     );
+}
+
+function changeViewMessages(room, action) {
+  const orderMessages = room.get('orderedMessages');
+  const viewMessages = room.get('viewMessages');
+  const { clientHeight, scrollTop, scrollHeight } = action.view;
+  let scrollCalc = true;
+
+  const order = {
+    count: orderMessages.count(),
+    start: 0,
+    end: orderMessages.count() - 1,
+  };
+
+  const view = {
+    count: viewMessages.count(),
+    start: orderMessages.indexOf(viewMessages.first()),
+    end: orderMessages.indexOf(viewMessages.last()),
+  };
+
+  const next = {
+    start: view.start,
+    end: view.end,
+  };
+
+  const height = scrollHeight / view.count;
+  const client = Math.ceil(clientHeight / height);
+  const need = client * 10;
+
+  const left = scrollHeight - (scrollTop + (clientHeight / 2));
+  const diff = Math.ceil(left / height);
+  const add = Math.ceil(((need * 2 / 5) * height - left) / height);
+  const rem = Math.ceil((left - (need * 3 / 5) * height) / height);
+  console.log('--', client, need, diff, add, rem);
+
+  let end = add > 0 ? view.end + add : view.end;
+  end = rem > 0 && view.end > need ? view.end - rem : end;
+  next.end = end > order.end ? order.end : end;
+
+  if (next.end === view.end) {
+    scrollCalc = false;
+    const one = next.end - need;
+    const two = view.count >= need ? one + 1 : one - 1;
+    next.start = two > 0 ? two : 0;
+  }
+  next.count = next.end - next.start + 1;
+  const messages = orderMessages.slice(next.start, next.end + 1);
+
+  console.log('view', view.count, view.start, view.end);
+  console.log('next', next.count, next.start, next.end);
+  console.log(scrollCalc);
+
+  return room
+    .set('scrollCalc', scrollCalc)
+    .set('viewMessages', messages);
 }
 
 /*
@@ -105,13 +160,16 @@ function rejectSentMessage(room, action) {
       text: string,
       time: number,
       index: number,
+      attachments: [],
       status: 'sent' | 'confirmed' | 'rejected',
     }),
     orderedMessages: ['messageID'],
+    scrollCalc: boolean,
+    viewMessages: ['messageID'],
   });
 */
 
-export default (state = Map({}), action) => {
+export default (state = Map(), action) => {
   function inside(reducer) {
     const { roomID } = action;
     if (!state.has(roomID)) return state;
@@ -128,6 +186,7 @@ export default (state = Map({}), action) => {
     case actions.SENT_MESSAGE:          return inside(sentMessage);
     case actions.CONFIRM_SENT_MESSAGE:  return inside(confirmSentMessage);
     case actions.REJECT_SENT_MESSAGE:   return inside(rejectSentMessage);
+    case actions.CHANGE_VIEW_MESSAGES:  return inside(changeViewMessages);
     default: return state;
   }
 };

@@ -31,6 +31,7 @@ if (__DEV__) {
     collapsed: true,
     predicate: (_, action) =>
       action.type !== 'ROOM_INPUT_CHANGE' &&
+      action.type !== 'CHANGE_VIEW_MESSAGES' &&
       action.type !== 'SEARCH_INPUT_CHANGE',
     transformer: (state) => state.toJS(),
   });
