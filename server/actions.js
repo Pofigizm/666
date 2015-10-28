@@ -7,7 +7,7 @@ import { Message } from './models/Message';
 import * as userGenerator from './userGenerator';
 import { fetchMetas } from './open-graph';
 
-const HISTORY_COUNT = 100;
+const HISTORY_COUNT = 1000;
 
 /**
  * Retun promise that resolve with Room instance from db or reject with error

@@ -8,6 +8,8 @@ import MessageList from '../MessageList';
 import RoomInput from '../RoomInput';
 import { changeViewMessages } from '../../actions';
 
+let preventScroll = false;
+
 function debounce(fn, delay) {
   let timer = null;
   return function deb(...args) {
@@ -17,11 +19,15 @@ function debounce(fn, delay) {
   };
 }
 
-function scrollHandler(e, handler) {
-  const { clientHeight, scrollTop, scrollHeight } = e.target;
+function scrollHandler(elem, handler, manual) {
+  if (!manual && preventScroll) {
+    preventScroll = false;
+    return;
+  }
+  const { clientHeight, scrollTop, scrollHeight } = elem;
   handler({ clientHeight, scrollTop, scrollHeight });
 }
-const onScroll = debounce(scrollHandler, 33);
+const onScroll = debounce(scrollHandler, 300);
 
 class Room extends Component {
   componentWillUpdate() {
@@ -30,11 +36,15 @@ class Room extends Component {
   }
 
   componentDidUpdate() {
-    const { room } = this.props;
+    const { dispatch, room, roomID } = this.props;
     const mess = findDOMNode(this.refs.messages);
-    const calc = room.scrollCalc;
-    console.log(calc, mess.scrollTop, mess.scrollHeight, this.scrollTop, this.scrollHeight);
-    mess.scrollTop = calc ? this.scrollTop : mess.scrollTop;
+    const updateBottom = room.updateBottom;
+    console.log(updateBottom, mess.scrollTop, this.scrollTop);
+    preventScroll = updateBottom;
+    mess.scrollTop = updateBottom ? this.scrollTop : mess.scrollTop;
+    if (updateBottom) {
+      scrollHandler(mess, view => dispatch(changeViewMessages(roomID, view)), true);
+    }
   }
 
   render() {
@@ -68,7 +78,7 @@ class Room extends Component {
           className="room-messages"
           ref="messages"
           id="roomMessages"
-          onScroll={e => onScroll(e, view => dispatch(changeViewMessages(roomID, view)))}
+          onScroll={e => onScroll(e.target, view => dispatch(changeViewMessages(roomID, view)))}
         >
           <MessageList messages={messages} />
         </div>

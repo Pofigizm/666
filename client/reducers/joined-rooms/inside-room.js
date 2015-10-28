@@ -94,7 +94,7 @@ function changeViewMessages(room, action) {
   const orderMessages = room.get('orderedMessages');
   const viewMessages = room.get('viewMessages');
   const { clientHeight, scrollTop, scrollHeight } = action.view;
-  let scrollCalc = true;
+  let updateBottom = true;
 
   const order = {
     count: orderMessages.count(),
@@ -128,20 +128,21 @@ function changeViewMessages(room, action) {
   next.end = end > order.end ? order.end : end;
 
   if (next.end === view.end) {
-    scrollCalc = false;
+    updateBottom = false;
     const one = next.end - need;
-    const two = view.count >= need ? one + 1 : one - 1;
-    next.start = two > 0 ? two : 0;
+    next.start = one > 0 ? one : 0;
   }
   next.count = next.end - next.start + 1;
+  const expectedTop = updateBottom && next.count < need && next.start > 0;
   const messages = orderMessages.slice(next.start, next.end + 1);
 
   console.log('view', view.count, view.start, view.end);
   console.log('next', next.count, next.start, next.end);
-  console.log(scrollCalc);
+  console.log(updateBottom, expectedTop);
 
   return room
-    .set('scrollCalc', scrollCalc)
+    .set('updateBottom', updateBottom)
+    .set('expectedTop', expectedTop)
     .set('viewMessages', messages);
 }
 
