@@ -165,7 +165,8 @@ function changeViewMessages(room, action) {
       status: 'sent' | 'confirmed' | 'rejected',
     }),
     orderedMessages: ['messageID'],
-    scrollCalc: boolean,
+    updateBottom: boolean,
+    expectedTop: boolean,
     viewMessages: ['messageID'],
   });
 */

@@ -25,33 +25,34 @@ class Infinity extends Component {
   }
 
   componentDidUpdate() {
-    const { dispatch, room, roomID } = this.props;
+    const { room } = this.props;
     const mess = findDOMNode(this.refs.messages);
     const updateBottom = room.updateBottom;
     console.log(updateBottom, mess.scrollTop, this.scrollTop);
-    this.preventScroll = updateBottom;
-    mess.scrollTop = updateBottom ? this.scrollTop : mess.scrollTop;
     if (updateBottom) {
-      this.scrollHandler(mess, view => dispatch(changeViewMessages(roomID, view)), true);
+      this.preventScroll = updateBottom;
+      mess.scrollTop = this.scrollTop;
+      this.scrollHandler(mess, true);
     }
   }
 
-  scrollHandler(elem, handler, manual) {
+  scrollHandler(elem, manual) {
+    const { dispatch, roomID } = this.props;
     if (!manual && this.preventScroll) {
-      preventScroll = false;
+      this.preventScroll = false;
       return;
     }
     const { clientHeight, scrollTop, scrollHeight } = elem;
-    handler({ clientHeight, scrollTop, scrollHeight });
+    const view = { clientHeight, scrollTop, scrollHeight };
+    dispatch(changeViewMessages(roomID, view));
   }
 
   render() {
-    const { dispatch, roomID } = this.props;
     return (
       <div
         className="room-messages"
         ref="messages"
-        onScroll={e => this.onScroll(e.target, view => dispatch(changeViewMessages(roomID, view)))}
+        onScroll={e => this.onScroll(e.target)}
       >
         {this.props.children}
       </div>

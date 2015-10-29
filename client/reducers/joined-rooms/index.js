@@ -21,7 +21,8 @@ import { Map, List } from 'immutable';
       status: 'sent' | 'confirmed' | 'rejected',
     }),
     orderedMessages: ['messageID'],
-    scrollCalc: boolean,
+    updateBottom: boolean,
+    expectedTop: boolean,
     viewMessages: ['messageID'],
   });
 */
@@ -69,6 +70,8 @@ export default (previous = Map(), action) => {
         roomUsers,
         roomMessages,
         orderedMessages,
+        updateBottom: false,
+        expectedTop: false,
         viewMessages,
       }));
     }
