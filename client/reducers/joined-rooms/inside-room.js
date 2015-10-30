@@ -146,6 +146,34 @@ function changeViewMessages(room, action) {
     .set('viewMessages', messages);
 }
 
+function addPartMessages(room, action) {
+  if (action.messages.length === 0) {
+    return room
+      .set('isAllMessages', true);
+  }
+  const orderedMessages = action.messages
+    .reduce((res, {messageID}) => res.push(messageID), List())
+    .concat(room.get('orderedMessages').toJS());
+  const roomMessages = action.messages
+    .reduce(
+      (result, {userID: thatUserID, messageID, text, time}, index) =>
+        result.set(messageID, Map({
+          messageID,
+          userID: thatUserID,
+          text,
+          time,
+          status: 'confirmed',
+          index,
+          attachments: List(),
+        })),
+        Map({}))
+    .concat(room.get('roomMessages').toJS());
+
+  return room
+    .set('orderedMessages', orderedMessages)
+    .set('roomMessages', roomMessages);
+}
+
 /*
   joinedRooms: HashMap('roomID', {
     userID: string,
@@ -189,6 +217,7 @@ export default (state = Map(), action) => {
     case actions.CONFIRM_SENT_MESSAGE:  return inside(confirmSentMessage);
     case actions.REJECT_SENT_MESSAGE:   return inside(rejectSentMessage);
     case actions.CHANGE_VIEW_MESSAGES:  return inside(changeViewMessages);
+    case actions.ADD_PART_MESSAGES:     return inside(addPartMessages);
     default: return state;
   }
 };

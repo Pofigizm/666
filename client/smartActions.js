@@ -137,3 +137,30 @@ export const sendMessage = () => (dispatch, getState) => {
     );
 };
 
+export const partMessages = roomID => (dispatch, getState) => {
+  const state = getState().toJS();
+  const room = state.joinedRooms[roomID];
+  if (!room) {
+    throw new Error('Terminal failure: room is not exist');
+  }
+  const { orderedMessages, viewMessages, isAllMessages } = room;
+  const left = orderedMessages.indexOf(viewMessages[0]);
+  console.log(isAllMessages);
+  if (isAllMessages || left > 50) {
+    return null;
+  }
+  const messageID = orderedMessages[0];
+  const { userID, secret } = room;
+  const request = {
+    roomID,
+    userID,
+    secret,
+    messageID,
+  };
+  exchange.partMessages(request)
+    .then(data => {
+      console.log(data);
+      dispatch(actions.addPartMessages(data));
+    });
+};
+

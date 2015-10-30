@@ -18,6 +18,15 @@ export const SEARCH_RESULTS_FAILED = 'SEARCH_RESULTS_FAILED';
 export const CREATE_ROOM_FAILED = 'CREATE_ROOM_FAILED';
 export const JOINING_ROOM = 'JOINING_ROOM';
 export const CHANGE_VIEW_MESSAGES = 'CHANGE_VIEW_MESSAGES';
+export const ADD_PART_MESSAGES = 'ADD_PART_MESSAGES';
+
+export function addPartMessages({roomID, messages}) {
+  return {
+    type: ADD_PART_MESSAGES,
+    roomID,
+    messages,
+  };
+}
 
 export function joiningRoom(roomID) {
   return {
