@@ -192,11 +192,12 @@ export function rejectSentMessage(pendingID, roomID, description) {
   };
 }
 
-export function changeViewMessages(roomID, view) {
+export function changeViewMessages(roomID, view, message) {
   return {
     type: CHANGE_VIEW_MESSAGES,
     roomID,
     view,
+    message,
   };
 }
 

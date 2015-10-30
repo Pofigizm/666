@@ -93,7 +93,8 @@ function rejectSentMessage(room, action) {
 function changeViewMessages(room, action) {
   const orderMessages = room.get('orderedMessages');
   const viewMessages = room.get('viewMessages');
-  const { clientHeight, scrollTop, scrollHeight } = action.view;
+  const viewState = action.view ? action.view : room.get('viewState');
+  const { clientHeight, scrollTop, scrollHeight } = viewState;
   let updateBottom = true;
 
   const order = {
@@ -132,6 +133,13 @@ function changeViewMessages(room, action) {
     const one = next.end - need;
     next.start = one > 0 ? one : 0;
   }
+
+  // scroll to new if condition
+  const lastMessageInView = scrollHeight - (clientHeight + scrollTop) < height;
+  if (action.message && next.end === order.end && lastMessageInView) {
+    updateBottom = false;
+  }
+
   next.count = next.end - next.start + 1;
   const expectedTop = updateBottom && next.count < need && next.start > 0;
   const messages = orderMessages.slice(next.start, next.end + 1);
@@ -143,6 +151,7 @@ function changeViewMessages(room, action) {
   return room
     .set('updateBottom', updateBottom)
     .set('expectedTop', expectedTop)
+    .set('viewState', viewState)
     .set('viewMessages', messages);
 }
 

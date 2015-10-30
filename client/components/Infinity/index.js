@@ -16,7 +16,7 @@ function debounce(fn, delay) {
 
 class Infinity extends Component {
   componentWillMount() {
-    this.onScroll = debounce(this.scrollHandler, 300);
+    this.onScroll = debounce(this.scrollHandler, 100);
     this.preventScroll = false;
   }
 

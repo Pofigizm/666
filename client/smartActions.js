@@ -126,7 +126,6 @@ export const sendMessage = () => (dispatch, getState) => {
     text: state.ui.roomInputText,
     time: Date.now(),
   };
-  dispatch(actions.roomInputChange(''));
   const pendingID = `pending-message:${newPendingID()}`;
   dispatch(actions.sentMessage(pendingID, message));
   exchange.sendMessage(message)
@@ -135,6 +134,11 @@ export const sendMessage = () => (dispatch, getState) => {
         , description =>
       dispatch(actions.rejectSentMessage(pendingID, roomID, description))
     );
+  // next tick
+  setTimeout(() => {
+    dispatch(actions.changeViewMessages(roomID, false, true));
+    dispatch(actions.roomInputChange(''));
+  }, 0);
 };
 
 export const partMessages = roomID => (dispatch, getState) => {
