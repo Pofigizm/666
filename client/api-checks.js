@@ -57,6 +57,12 @@ export const joinUser = wrap('joinUser', data => {
   return true;
 });
 
+export const partMessages = wrap('partMessages', ({data}) => {
+  throwWhen(typeof data.roomID === 'string');
+  throwWhen(data.messages instanceof Array);
+  return true;
+});
+
 export const leaveUser = wrap('leaveUser', data => {
   throwWhen(typeof data.roomID === 'string');
   throwWhen(typeof data.userID === 'string');

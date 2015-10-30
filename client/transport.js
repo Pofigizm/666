@@ -55,6 +55,7 @@ const config = {
   exchange: [
     'joinRoom',
     'leaveRoom',
+    'partMessages',
     'sendMessage',
     'searchRoomID',
     'createRoom',
