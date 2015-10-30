@@ -3,6 +3,7 @@ import { findDOMNode } from 'react-dom';
 
 import { connect } from 'react-redux';
 import { changeViewMessages } from '../../actions';
+import { partMessages } from '../../smartActions';
 
 function debounce(fn, delay) {
   let timer = null;
@@ -17,6 +18,12 @@ class Infinity extends Component {
   componentWillMount() {
     this.onScroll = debounce(this.scrollHandler, 300);
     this.preventScroll = false;
+  }
+
+  componentDidMount() {
+    // initial request for render
+    const mess = findDOMNode(this.refs.messages);
+    mess.scrollTop = mess.scrollTop - 1;
   }
 
   componentWillUpdate() {
@@ -45,6 +52,7 @@ class Infinity extends Component {
     const { clientHeight, scrollTop, scrollHeight } = elem;
     const view = { clientHeight, scrollTop, scrollHeight };
     dispatch(changeViewMessages(roomID, view));
+    dispatch(partMessages(roomID));
   }
 
   render() {
