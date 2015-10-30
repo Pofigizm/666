@@ -46,6 +46,17 @@ const joinRoom = request => () => actions.joinRoom(request)
     ];
   });
 
+const partMessages = request => () => actions.partMessages(request)
+  .then(({roomID, messages}) => {
+    return [{
+      type: 'exchange',
+      data: {
+        roomID,
+        messages,
+      },
+    }];
+  });
+
 const leaveRoom = request => () => actions.leaveRoom(request)
   .then(({roomID, userID}) => {
     const channel = `room:${roomID}`;
@@ -108,6 +119,7 @@ const searchRoomID = request => () => actions.searchRoomID(request)
 export const handlers = {
   createRoom,
   joinRoom,
+  partMessages,
   leaveRoom,
   sendMessage,
   searchRoomID,

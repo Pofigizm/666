@@ -7,7 +7,7 @@ import { Message } from './models/Message';
 import * as userGenerator from './userGenerator';
 import { fetchMetas } from './open-graph';
 
-const HISTORY_COUNT = 1000;
+const HISTORY_COUNT = 50;
 
 /**
  * Retun promise that resolve with Room instance from db or reject with error
@@ -209,6 +209,26 @@ export function joinRoom({roomID, userID, secret}) {
       return {
         identity: user,
         room,
+      };
+    });
+}
+
+/**
+ * Retun promise that add user to a room and resolve with hash with user data
+ * @param  {String} options.roomID - room identifier
+ * @return {Promise}
+ */
+export function partMessages({roomID, userID, secret, messageID}) {
+  return _getRoom(roomID)
+    .then(room => _getUser({room, userID, secret}))
+    .then( ({room}) => {
+      const last = room.messages.findIndex(mess => mess.messageID === messageID);
+      const first = last - HISTORY_COUNT;
+      const messages = room.messages.slice(first > 0 ? first : 0, last > 0 ? last : 0);
+      console.log(room.messages.length, first, last, messages.length);
+      return {
+        roomID,
+        messages,
       };
     });
 }
