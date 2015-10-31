@@ -149,7 +149,6 @@ export const partMessages = roomID => (dispatch, getState) => {
   }
   const { orderedMessages, viewMessages, isAllMessages } = room;
   const left = orderedMessages.indexOf(viewMessages[0]);
-  console.log(isAllMessages);
   if (isAllMessages || left > 50) {
     return null;
   }
@@ -163,7 +162,6 @@ export const partMessages = roomID => (dispatch, getState) => {
   };
   exchange.partMessages(request)
     .then(data => {
-      console.log(data);
       dispatch(actions.addPartMessages(data));
     });
 };

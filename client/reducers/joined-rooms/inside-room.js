@@ -95,6 +95,7 @@ function changeViewMessages(room, action) {
   const viewMessages = room.get('viewMessages');
   const viewState = action.view ? action.view : room.get('viewState');
   const { clientHeight, scrollTop, scrollHeight } = viewState;
+  console.log(Boolean(viewState), clientHeight, scrollTop, scrollHeight);
   let updateBottom = true;
 
   const order = {
@@ -144,6 +145,7 @@ function changeViewMessages(room, action) {
   const expectedTop = updateBottom && next.count < need && next.start > 0;
   const messages = orderMessages.slice(next.start, next.end + 1);
 
+  console.log('order', order.count, order.start, order.end);
   console.log('view', view.count, view.start, view.end);
   console.log('next', next.count, next.start, next.end);
   console.log(updateBottom, expectedTop);
@@ -160,10 +162,17 @@ function addPartMessages(room, action) {
     return room
       .set('isAllMessages', true);
   }
-  const orderedMessages = action.messages
+
+  const oldMessages = room.get('orderedMessages');
+  const newMessages = action.messages
+    .filter(curr => !~oldMessages.indexOf(curr.messageID));
+  console.log(newMessages.length);
+  if (newMessages.length === 0) return room;
+
+  const orderedMessages = newMessages
     .reduce((res, {messageID}) => res.push(messageID), List())
-    .concat(room.get('orderedMessages').toJS());
-  const roomMessages = action.messages
+    .concat(oldMessages);
+  const roomMessages = newMessages
     .reduce(
       (result, {userID: thatUserID, messageID, text, time}, index) =>
         result.set(messageID, Map({
@@ -176,7 +185,9 @@ function addPartMessages(room, action) {
           attachments: List(),
         })),
         Map({}))
-    .concat(room.get('roomMessages').toJS());
+    .concat(room.get('roomMessages'));
+
+  console.log('addPartMessages', orderedMessages.count(), roomMessages.count());
 
   return room
     .set('orderedMessages', orderedMessages)
