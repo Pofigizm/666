@@ -7,8 +7,15 @@ import { partMessages } from '../../smartActions';
 
 function debounce(fn, delay) {
   let timer = null;
+  let count = 0;
   return function deb(...args) {
     clearTimeout(timer);
+    if (count > 50) {
+      fn.call(this, ...args);
+      count = 0;
+      return;
+    }
+    count++;
     timer = setTimeout(() =>
       fn.call(this, ...args), delay);
   };
