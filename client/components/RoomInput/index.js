@@ -44,9 +44,9 @@ class RoomInput extends Component {
       attachments: [],
     };
     return (
-      <div className="room-inputed">
+      <div>
         {!showPreview ? false :
-          <div className="room-inputed-preview">
+          <div className="room-preview">
             <Message message={previewMessage} />
           </div>
         }
