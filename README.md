@@ -2,7 +2,15 @@
 
 # 666 chat
 
-Update all
+## Prod server
+
+#### Деплой
+
+на любой машине с docker скачать https://github.com/Pofigizm/666/blob/develop/docker/do_scripts/build.sh и запустить. Это сбилдит текущую версию из develop ветки, соберет контейнер и запустит его.
+
+## Local
+
+update all
 ```
 git pull -a
 git checkout master
@@ -17,7 +25,7 @@ brew update
 brew install mongodb
 ```
 
-### Dev
+#### Dev
 Run MongoDB before run server:
 ```
 mongod
@@ -47,19 +55,19 @@ Allow socket debug
 localStorage.debug = 'socket.io-parser decoded*'
 ```
 
-### Prod
+#### Prod
 Run prod server:
 ```
 npm run prod
 ```
 
-### Prod in docker
+#### Prod in docker
 Нужно установить docker, затем в его консоли:
 ```
 npm run dock
 ```
 
-# API :smirk_cat:
+## API :smirk_cat:
  Описание взаимодействия клиентов и сервера.
 
 Обозначения:
@@ -67,7 +75,7 @@ npm run dock
 * :no_entry_sign: -- Поддержки нет
 * :exclamation: -- Есть какая-то проблема (должно быть описание)
 
-## `broadcast`
+### `broadcast`
 Сообщения, приходящие от сервера всем кто присоединился. Имена socket.io событий нужно начинать с `broadcast:`
 
 Пример: `broadcast:topRooms`.
@@ -91,7 +99,7 @@ npm run dock
 --- | ---
 :white_check_mark: | :white_check_mark:
 
-## `roomcast`
+### `roomcast`
 Сообщения, приходящие от сервера всем в комнате. Имена socket.io событий нужно начинать с `roomcast:`
 
 Пример: `roomcast:message`.
@@ -164,7 +172,7 @@ npm run dock
 --- | ---
 :white_check_mark: | :white_check_mark:
 
-## `exchange`
+### `exchange`
 
 Пары запрос-ответ. Клиент делает запрос, сервер отвечает только ему.
 Имена socket.io событий нужно начинать с `client-request:` для запросов, `server-response:` для ответов.
