@@ -136,7 +136,7 @@ export const sendMessage = () => (dispatch, getState) => {
     );
   // next tick
   setTimeout(() => {
-    dispatch(actions.changeViewMessages(roomID, false, true));
+//    dispatch(actions.changeViewMessages(roomID, false, true));
     dispatch(actions.roomInputChange(''));
   }, 0);
 };
