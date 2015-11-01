@@ -95,7 +95,7 @@ function changeViewMessages(room, action) {
   const viewMessages = room.get('viewMessages');
   const viewState = action.view ? action.view : room.get('viewState');
   const { clientHeight, scrollTop, scrollHeight } = viewState;
-  console.log(Boolean(viewState), clientHeight, scrollTop, scrollHeight);
+  console.log(Boolean(action.view), clientHeight, scrollTop, scrollHeight);
   let updateBottom = true;
 
   const order = {
@@ -115,14 +115,17 @@ function changeViewMessages(room, action) {
     end: view.end,
   };
 
-  const height = scrollHeight / view.count;
+  const calcHeight = scrollHeight / view.count;
+  const height = calcHeight && calcHeight > 80 ? calcHeight : 80;
   const client = Math.ceil(clientHeight / height);
-  const need = client * 10;
+  const calcNeed = client * 10;
+  const need = calcNeed && calcNeed > 20 ? calcNeed : 20;
 
   const left = scrollHeight - (scrollTop + (clientHeight / 2));
-  const diff = Math.ceil(left / height);
-  const add = Math.ceil(((need * 2 / 5) * height - left) / height);
-  const rem = Math.ceil((left - (need * 3 / 5) * height) / height);
+  const calcDiff = Math.ceil(left / height);
+  const diff = calcDiff && calcDiff > 2 ? calcDiff : 2;
+  const add = Math.ceil((need * 2 / 5) - diff);
+  const rem = Math.ceil(diff - (need * 3 / 5));
   console.log('--', client, need, diff, add, rem);
 
   let end = add > 0 ? view.end + add : view.end;
@@ -215,6 +218,7 @@ function addPartMessages(room, action) {
     orderedMessages: ['messageID'],
     updateBottom: boolean,
     expectedTop: boolean,
+    viewState: {},
     viewMessages: ['messageID'],
   });
 */

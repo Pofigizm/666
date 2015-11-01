@@ -23,6 +23,7 @@ import { Map, List } from 'immutable';
     orderedMessages: ['messageID'],
     updateBottom: boolean,
     expectedTop: boolean,
+    viewState: {},
     viewMessages: ['messageID'],
   });
 */
@@ -72,6 +73,7 @@ export default (previous = Map(), action) => {
         orderedMessages,
         updateBottom: false,
         expectedTop: false,
+        viewState: {},
         viewMessages,
       }));
     }
